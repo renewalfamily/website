@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- no cache -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <link rel="icon" href="static/favicon.ico">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/app.css">
+
+    <title>{{block "tmTitle" .}}Template Title{{end}}</title>
+</head>
+<body>
+
+<nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+    <div class="container ">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu1">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-around" id="menu1">
+            <!--<a class="navbar-brand" href="#top">Renew Family</a>-->
+            <ul class="navbar-nav">
+                <li class="nav-item {{if eq .PageName "index"}}active{{end}}">
+                    <a class="nav-link" href="http://www.renewalfamily.org/index-{{.Lang}}.html">
+                        {{if eq .Lang "cn"}}
+                        首页
+                        {{else if eq .Lang "tw"}}
+                        首頁
+                        {{else if eq .Lang "en"}}
+                        Home
+                        {{end}}
+                    </a>
+                </li>
+                <li class="nav-item {{if eq .PageName "together"}}active{{end}}">
+                    <a class="nav-link" href="http://www.renewalfamily.org/yomkippur/{{.Lang}}.html">
+                        {{if eq .Lang "cn"}}
+                        ＜如同一人＞聚集
+                        {{else if eq .Lang "tw"}}
+                        ＜如同一人＞聚集
+                        {{else if eq .Lang "en"}}
+                        Together As One
+                        {{end}}
+                    </a>
+                </li>
+
+            </ul>
+
+            <ul class="navbar-nav">
+                {{if ne .Lang "en"}}
+                <li class="nav-item">
+                    <a class="nav-link text-light mr-1" href="index-en.html">
+                        <img src="static/usa.png" alt="">English
+                    </a>
+                </li>
+                {{end}}
+                {{if ne .Lang "cn"}}
+                <li class="nav-item">
+                    <a class="nav-link text-light mr-1" href="index-cn.html">
+                        <img src="static/china.png" alt="">简体
+                    </a>
+                    <!--<a class="nav-link btn btn-outline-success mr-1" href="/cn.html">简体</a>-->
+                </li>
+                {{end}}
+                {{if ne .Lang "tw"}}
+                <li class="nav-item">
+                    <a class="nav-link text-light mr-1" href="index-tw.html">
+                        <img src="static/taiwan.png" alt="">繁體
+                    </a>
+                </li>
+                {{end}}
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+{{block "tmContent" .}}Default Content{{end}}
+
+
+<footer class="footer text-white bg-dark">
+    <div class="container text-center py-3">
+        <span><small>
+        {{if eq .Lang "cn"}}
+        网站：www.RenewalFamily.org<br>
+        版权所有 © 2018  更新家庭 / 温哥华城市祷告祭坛
+        {{else if eq .Lang "tw"}}
+        網站：www.RenewalFamily.org<br>
+        版權所有 © 2018  更新家庭 / 溫哥華城市禱告祭壇
+        {{else if eq .Lang "en"}}
+        Website：www.RenewalFamily.org<br>
+        Copyright © 2018 Renewal Family / Vancouver City Prayer Altar
+        {{end}}
+        </small></span>
+    </div>
+</footer>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+</html>
