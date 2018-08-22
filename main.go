@@ -18,7 +18,7 @@ type tmpDetail struct {
 // lists of the template name and the files to parse together
 var tmpDetails = []tmpDetail{
 	{"index", []string{"template/baseof.html", "template/index.html"}},
-	//{"about", []string{"template/baseof.html","template/about.html"}},
+	{"about", []string{"template/baseof.html", "template/about.html"}},
 	//{"together", []string{"template/baseof.html","template/together.html"}},
 }
 
@@ -61,7 +61,7 @@ func hdIndex(w http.ResponseWriter, r *http.Request) {
 
 func hdGen(w http.ResponseWriter, r *http.Request) {
 	dst := "dst"
-	staticFiles := []string{"index-cn.html", "index-tw.html", "index-en.html"}
+	staticFiles := []string{"index-cn.html", "index-tw.html", "index-en.html", "about-cn.html", "about-tw.html", "about-en.html"}
 	for _, fileName := range staticFiles {
 		fullName := fmt.Sprintf("%v/%v", dst, fileName)
 		fmt.Println(fullName)

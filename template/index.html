@@ -9,14 +9,57 @@ Renewal Family
 {{end}}
 
 {{define "tmContent"}}
+
 <div class="container">
-    <div class="row">
-        <div class="col text-center mt-3">
-            <p>进入 <a href="http://www.renewalfamily.org/yomkippur/cn.html"><strong>如同一人</strong> -- 5779犹太新年吹角节聚集</a><br>
-                進入 <a href="http://www.renewalfamily.org/yomkippur/cn.html"><strong>如同一人</strong> -- 5779猶太新年吹角節聚集</a><br>
-                Go to <a href="http://www.renewalfamily.org/yomkippur/en.html"><strong>Together As One</strong> -- 5779 New Year Gathering</a></p>
-            <img src="static/shofar.jpg" alt="">
+    <div class="row mt-3">
+        <div class="col-12 col-md-6">
+            <div class="card bg2">
+                <a href="http://www.renewalfamily.org/yomkippur/cn.html">
+                    <img class="card-img-top" src="static/shofar.jpg" alt="Card image cap">
+                </a>
+                <div class="card-body text-justify">
+                    {{if eq .Lang "cn"}}
+                    <h4 class="card-title">5779 犹太新年吹角节聚集</h4>
+                    <p class="card-text">今年9月9日是一个特别的日子，除了傍晚开始正好是犹太新年5779吹角节，也是40天全球禁食祷告的结束，并且“正巧”是主日！ 利未記23:23-25 「你曉諭以色列人說：七月初一，你們要守為聖安息日，要吹角 做紀念，當有聖會。什麼勞碌的工都不可做，要將火祭獻給耶和華。」</p>
+                    <a class="btn btn-danger" href="http://www.renewalfamily.org/yomkippur/cn.html">点击进入</a>
+                    {{else if eq .Lang "tw"}}
+                    <h4 class="card-title">5779 猶太新年吹角節聚集</h4>
+                    <p class="card-text">今年9月9日是一個特別的日子，除了傍晚開始正好是猶太新年5779吹角節，也是40天全球禁食禱告的結束，並且“正巧”是主日！ 利未記23:23-25 「你曉諭以色列人說：七月初一，你們要守為聖安息日，要吹角 做紀念，當有聖會。什麼勞碌的工都不可做，要將火祭獻給耶和華。」</p>
+                    <a class="btn btn-danger" href="http://www.renewalfamily.org/yomkippur/cn.html">點擊進入</a>
+                    {{else if eq .Lang "en"}}
+                    <h4 class="card-title">5779 New Year Gathering</h4>
+                    <p class="card-text">September 9 is very unique. It is the beginning of the 5779 Jewish New Year, Feast of Trumpet, and also the ending time of 40 day global fasting. And that day happened to be a Sunday! Leviticus 23:23 - 25 recorded what the Lord says concerning Feast of Trumpet: Observe the Feast! Call the Holy assembly! Blow the shofar! Bring the burn offering! Ezra 3:1 also describe that in Jewish New Year, Israelites will gather in Jerusalem TOGETHER As ONE! </p>
+                    <a class="btn btn-danger" href="http://www.renewalfamily.org/yomkippur/cn.html">Go</a>
+                    {{end}}
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="card bg1">
+                <a href="http://www.ihopuchinese.org/Artcle/Index?MenuId=26&NavigateId=28" target="_blank">
+                    <img class="card-img-top" src="static/convergence.jpg" alt="Card image cap">
+                </a>
+                <div class="card-body text-justify">
+                    {{if eq .Lang "cn"}}
+                    <h4 class="card-title">“匯集”回家聚集</h4>
+                    <p class="card-text">匯集」是由北美华人召集的一次回家聚集。我们寻求神的时候，神把美国IHOPKC（国际祷告殿）的门打开，让我们在美国中部举办这个聚集，
+                        祂的心意是要带下极大的合一，族裔的合一，东西方的合一，不同宗派的合一。从合一的权柄中，祂要在一群寻求祂面的百姓里面施行奇事。</p>
+                    <a class="btn btn-primary" href="http://www.ihopuchinese.org/Artcle/Index?MenuId=26&NavigateId=28" target="_blank">点击进入</a>
+                    {{else if eq .Lang "tw"}}
+                    <h4 class="card-title">“匯集”回家聚集</h4>
+                    <p class="card-text">匯集」是由北美華人召集的一次回家聚集。我們尋求神的時候，神把美國IHOPKC（國際禱告殿）的門打開，讓我們在美國中部舉辦這個聚集，
+                        祂的心意是要帶下極大的合一，族裔的合一，東西方的合一，不同宗派的合一。從合一的權柄中，祂要在一群尋求祂面的百姓裏面施行奇事。</p>
+                    <a class="btn btn-primary" href="http://www.ihopuchinese.org/Artcle/Index?MenuId=26&NavigateId=28" target="_blank">點擊進入</a>
+                    {{else if eq .Lang "en"}}
+                    <h4 class="card-title">Convergence <small>- North American Gathering</small></h4>
+                    <p class="card-text">Convergence is a gathering called by a group of North American Chinese. When they sought the Lord, the Lord opened the door of IHOPKC to host this gathering. We believe His heart is for unification; unification of people groups, of East and the West and of the Christian denominations. When we are truly unified, we will have godly authority. The Lord is about to perform His wonders among a group of people who are unified in seekingHis face.</p>
+                    <a class="btn btn-primary" href="http://www.ihopuchinese.org/Artcle/Index?MenuId=26&NavigateId=28" target="_blank">Go</a>
+                    {{end}}
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+
 {{end}}
