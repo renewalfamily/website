@@ -36,10 +36,14 @@ func init() {
 }
 
 func main() {
+	// for static files
 	fs := http.StripPrefix("/static/", http.FileServer(http.Dir("./static/")))
 	http.Handle("/static/", fs)
 
+	// generate static files
 	http.HandleFunc("/gen", hdGen)
+
+	// catch all
 	http.HandleFunc("/", hdIndex)
 	log.Println("listening at :1112")
 	log.Println(http.ListenAndServe(":1112", nil))
