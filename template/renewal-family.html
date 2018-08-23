@@ -10,7 +10,7 @@ Renewal Family
 
 {{define "tmContent"}}
 
-<div class="container" id="pictures">
+<div class="container my-5" id="pictures">
     <div class="row">
         <div class="col">
             {{if eq .Lang "tw"}}
@@ -24,7 +24,7 @@ Renewal Family
     </div>
     <div class="row">
         <div class="col-12 col-md-10 col-lg-6 mx-auto text-center">
-            <div id="carousel" class="carousel slide mb-3" data-ride="carousel">
+            <div id="carousel" class="carousel slide mb-3" data-ride="carousel" data-interval="10000">
                 <ol class="carousel-indicators">
                     <li data-target="#carousel" data-slide-to="0" class="active"></li>
                     <li data-target="#carousel" data-slide-to="1"></li>
@@ -68,18 +68,18 @@ Renewal Family
             {{if eq .Lang "tw"}}
 
             <!--<h1 class="text-center">更新家庭</h1>-->
-            <p><strong>更新家庭</strong>原名更新團契。1996年，神感動一群溫哥華的牧者，在城市的父老趙仲權牧師的帶領之下， 願意超越自己的事工，單單渴慕主在溫哥華找到祂的安息之所！ 我們每周聚集，跨宗派、跨教會，一起敬拜，分享心，尋求主，彼此扶持和代禱，漸漸成為真正的家人。每年在新年我們有聯合主日聚會，也不時舉辦退修會進入更深的關系。牧者的下一代也成為相愛同行的一群年輕人，兩代同行成為溫哥華城市美好的產業和見証。我們在一起相交非常美好，也越來越渴慕更深切一起禱告，於是我們有每月一次的聯禱會。</p>
+            <p><span class="h4">更新家庭</span> 原名更新團契。1996年，神感動一群溫哥華的牧者，在城市的父老趙仲權牧師的帶領之下， 願意超越自己的事工，單單渴慕主在溫哥華找到祂的安息之所！ 我們每周聚集，跨宗派、跨教會，一起敬拜，分享心，尋求主，彼此扶持和代禱，漸漸成為真正的家人。每年在新年我們有聯合主日聚會，也不時舉辦退修會進入更深的關系。牧者的下一代也成為相愛同行的一群年輕人，兩代同行成為溫哥華城市美好的產業和見証。我們在一起相交非常美好，也越來越渴慕更深切一起禱告，於是我們有每月一次的聯禱會。</p>
             <p>天父的心中還有更美好的計劃。2013年底的一個周二晚上，我們中的一位領袖參加錫安教會的禱告會，在那裡的禱告和一般當地教會的禱告會很不同，他們不是在為自己的教會禱告，而是在為神的心，神的夢想禱告，為前方在國度中奔走的父老來守望禱告！ 為神放在心中有感動的國家提名禱告！ 她特別感動，聖靈對她說：“如果一個錫安教會能這樣來服事我的國，用膝蓋用禱告來托住在各地的回家聚集，我就能做這麼大的事；試想如果不只是一個錫安教會，而是整個城市，一起來單單尋求主的心，為神的國度來代求，那將會多麼美好，神的國將會如何被大大祝福呢！ 溫哥華可以成為錫安之城嗎？ 溫哥華可以這樣為我的國劬勞嗎？”  她就流淚，回應主的呼召：“主啊，我願意，盼望我們都願意！”這是神啟動城市禱告祭壇的開始。</p>
 
             {{else if eq .Lang "cn"}}
 
             <!--<h1 class="text-center">更新家庭</h1>-->
-            <p><strong>更新家庭</strong>原名更新团契。1996年，神感动一群温哥华的牧者，在城市的父老赵仲权牧师的带领之下， 愿意超越自己的事工，单单渴慕主在温哥华找到祂的安息之所！ 我们每周聚集，跨宗派、跨教会，一起敬拜，分享心，寻求主，彼此扶持和代祷，渐渐成为真正的家人。每年在新年我们有联合主日聚会，也不时举办退修会进入更深的关系。牧者的下一代也成为相爱同行的一群年轻人，两代同行成为温哥华城市美好的产业和见证。我们在一起相交非常美好，也越来越渴慕更深切一起祷告，于是我们有每月一次的联祷会。</p>
+            <p><span class="h4">更新家庭</span> 原名更新团契。1996年，神感动一群温哥华的牧者，在城市的父老赵仲权牧师的带领之下， 愿意超越自己的事工，单单渴慕主在温哥华找到祂的安息之所！ 我们每周聚集，跨宗派、跨教会，一起敬拜，分享心，寻求主，彼此扶持和代祷，渐渐成为真正的家人。每年在新年我们有联合主日聚会，也不时举办退修会进入更深的关系。牧者的下一代也成为相爱同行的一群年轻人，两代同行成为温哥华城市美好的产业和见证。我们在一起相交非常美好，也越来越渴慕更深切一起祷告，于是我们有每月一次的联祷会。</p>
             <p>天父的心中还有更美好的计划。2013年底的一个周二晚上，我们中的一位领袖参加锡安教会的祷告会，在那里的祷告和一般当地教会的祷告会很不同，他们不是在为自己的教会祷告，而是在为神的心，神的梦想祷告，为前方在国度中奔走的父老来守望祷告！ 为神放在心中有感动的国家提名祷告！ 她特别感动，圣灵对她说：“如果一个锡安教会能这样来服事我的国，用膝盖用祷告来托住在各地的回家聚集，我就能做这么大的事；试想如果不只是一个锡安教会，而是整个城市，一起来单单寻求主的心，为神的国度来代求，那将会多么美好，神的国将会如何被大大祝福呢！ 温哥华可以成为锡安之城吗？ 温哥华可以这样为我的国劬劳吗？”  她就流泪，回应主的呼召：“主啊，我愿意，盼望我们都愿意！”这是神启动城市祷告祭坛的开始。</p>
 
             {{else if eq .Lang "en"}}
             <!--<h1 class="text-center">Renewal Family</h1>-->
-            <p><strong>Renewal Family</strong>, was originally Renewal Fellowship, founded in 1996, was made up of a group of pastors from different denominations,
+            <p><span class="h4">Renewal Family</span>, was originally Renewal Fellowship, founded in 1996, was made up of a group of pastors from different denominations,
                 led by the spirit of the Lord. Pastor Gideon Chiu is the father among us, and we met on weekly basis to worship, share heart,
                 support each other. We become a true family.  Each year, we will have a joint service in the beginning of the year.
                 We also hold retreats to have deeper relationship with each other.

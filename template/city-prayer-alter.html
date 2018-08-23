@@ -1,0 +1,85 @@
+{{define "tmTitle"}}
+{{if eq .Lang "cn"}}
+城市祷告祭坛
+{{else if eq .Lang "tw"}}
+城市禱告祭壇
+{{else if eq .Lang "en"}}
+City Prayer Altar
+{{end}}
+{{end}}
+
+{{define "tmContent"}}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col">
+            {{if eq .Lang "tw"}}
+            <h1 class="text-center">城市禱告祭壇</h1>
+            {{else if eq .Lang "cn"}}
+            <h1 class="text-center">城市祷告祭坛</h1>
+            {{else if eq .Lang "en"}}
+            <h1 class="text-center">City Prayer Altar</h1>
+            {{end}}
+        </div>
+    </div>
+</div>
+
+<div class="container mb-5" id="cityPrayerAltar">
+    <div class="row">
+        <div class="col-10 mx-auto text-justify">
+            {{if eq .Lang "tw"}}
+            <p>
+                當我們一起回應主的呼召，主我們在各地行走的時候，看到主在亞洲、歐洲及世界各地快手筆的工作，我們更渴慕祂在回家的母腹溫哥華看見祂的作為。於是從2014年底，藉著城市眾長老的鼓勵和遮蓋及先知Imiel話語的印証，我們開始了城市性的聚集禱告。雖然在這之前有聯合禱告會，但是神讓我們更頻繁地在一起，成為一個城市禱告祭壇。神也感動我們要先從牧者開始，如同耶穌雖是我們的王，他至今在父的右邊為我們代求，是我們的代禱者！主是我們的榜樣。我們就呼召牧者先站在位上，不再是單單由代禱者帶領的禱告會，而是牧者們同心合意，一起站在城門口的守望我們的城市，從亞倫的頭上禱告的膏油從頭上流到衣襟，流到我們所牧養的城市眾教會。
+            </p>
+            <p>
+                主不斷加添我們這一小群對祂同在的渴慕，每周的聚集外，后又加上每月一次12小時不間斷的敬拜，后來成為與以色列節期對齊的月朔聚集。在2016年底，我們回應戴冕恩牧師命定晨光的呼召，每天早上五點鐘有不同教會的牧者，輪流帶領城市的代禱者們一起禱告。從2016年12月25日到現在，全年無休。感謝神！從每月聚到每周聚到日日聚，我們感嘆祂的聖靈親自的帶領！
+            </p>
+            <p>
+                幾乎同時，在2016年底，神也把溫哥華聚集的感動放在我們心中。我們就在每天早晨5點鐘的命定晨光來尋求主！盼望神不僅是在遠方的國度，也在近處我們的教會中，找到祂的安居之所！在當地教會與國度之間，我們看到神要興起合祂心意的城市！如同當年給初代教會的信是寫給城市的，神看中城市！神的愛讓我們在同一個城市中更深地相愛，更深地連接，在城市中打破教會之間的牆垣，如同親密的近鄰，讓彼此相愛的主的新命令，得以更深地釋放在我們當中。禱告祭壇因著錫安教會和更新家庭釋放出來的的家的恩膏， 我們不僅是禱告的勇士， 也是真實的家人！ 願神也在你的城市看到不同教會的牧者能彼此擁有，同心同行！ 相信美好的事情也一定會發生在你的城市！
+            </p>
+            {{else if eq .Lang "cn"}}
+
+            <p>
+                当我们一起回应主的呼召，主我们在各地行走的时候，看到主在亚洲、欧洲及世界各地快手笔的工作，我们更渴慕祂在回家的母腹温哥华看见祂的作为。于是从2014年底，藉着城市众长老的鼓励和遮盖及先知Imiel话语的印证，我们开始了城市性的聚集祷告。虽然在这之前有联合祷告会，但是神让我们更频繁地在一起，成为一个城市祷告祭坛。神也感动我们要先从牧者开始，如同耶稣虽是我们的王，他至今在父的右边为我们代求，是我们的代祷者！主是我们的榜样。我们就呼召牧者先站在位上，不再是单单由代祷者带领的祷告会，而是牧者们同心合意，一起站在城门口的守望我们的城市，从亚伦的头上祷告的膏油从头上流到衣襟，流到我们所牧养的城市众教会。
+            </p>
+            <p>
+                主不断加添我们这一小群对祂同在的渴慕，每周的聚集外，后又加上每月一次12小时不间断的敬拜，后来成为与以色列节期对齐的月朔聚集。在2016年底，我们回应戴冕恩牧师命定晨光的呼召，每天早上五点钟有不同教会的牧者，轮流带领城市的代祷者们一起祷告。从2016年12月25日到现在，全年无休。感谢神！从每月聚到每周聚到日日聚，我们感叹祂的圣灵亲自的带领！
+            </p>
+            <p>
+                几乎同时，在2016年底，神也把温哥华聚集的感动放在我们心中。我们就在每天早晨5点钟的命定晨光来寻求主！盼望神不仅是在远方的国度，也在近处我们的教会中，找到祂的安居之所！在当地教会与国度之间，我们看到神要兴起合祂心意的城市！如同当年给初代教会的信是写给城市的，神看中城市！神的爱让我们在同一个城市中更深地相爱，更深地连接，在城市中打破教会之间的墙垣，如同亲密的近邻，让彼此相爱的主的新命令，得以更深地释放在我们当中。祷告祭坛因着锡安教会和更新家庭释放出来的的家的恩膏， 我们不仅是祷告的勇士， 也是真实的家人！ 愿神也在你的城市看到不同教会的牧者能彼此拥有，同心同行！ 相信美好的事情也一定会发生在你的城市！
+            </p>
+
+            {{else if eq .Lang "en"}}
+
+            <p>
+                As we visited different nations, we also witnessed that the Lord is doing great and swift works in Asia,
+                Europe and different parts of the world.  We long to see more of His deeds in Vancouver, this mother womb of the “gatherings”!
+                We started City Prayer Altar by the confirmation of the fathers and Prophet Imeil’s words, in 2014.
+                Although we already had monthly joint prayer meeting, the Lord increased our frequency to make it a weekly prayer gathering.
+                The Lord also moved our hearts that it should start with pastors, just like Jesus is our King and He is now
+                sitting at the right hand of God interceding for us as an intercessor. As Jesus is our example,
+                we also called the pastors to stand at the position first. As the pastors stand in position,
+                it would be like the anointing poured out on Aaron’s head, flowing down to his head and beard and whole body,
+                and the praying anointing will flow to the churches we are pastoring.
+            </p>
+            <p>
+                As this group of pastors longed for the presence of the Lord, we started our weekly prayer gathering,
+                and then the Lord led us to have a 12-hour worship each month, later becomes monthly First Fruit Gathering.
+                Toward the end of 2016, we responded to Pastor David Demian’s call on “Awakening the Dawn” prayer.
+                Since then, pastors from the city take turns leading the 5 am daily morning prayer meeting. Starting from December 25th 2016,
+                this prayer meeting has not ceased for a day.
+            </p>
+            <p>
+                Around the same time at the end of 2016, the Lord also put a burden in our heart about this Vancouver Gathering.
+                We started seeking the Lord daily, and our desire is to prepare for Him a dwelling place, not only in far away nations,
+                but also in our very city and amongst our churches. Between the local churches and the nations,
+                the Lord is raising up cities that are after His own heart.  Just like the early churches, the Lord worked city by city.
+                He broke down the walls between the churches, and released deeper anointing of loving one another.
+                We are not only a family that pray together, we are also a truly family that walk together.
+                We pray that the Lord will do greater things in your city.  Beautiful things are bound to happen when we love and walk together!
+            </p>
+            {{end}}
+        </div>
+    </div>
+</div>
+{{end}}

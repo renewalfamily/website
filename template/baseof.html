@@ -27,11 +27,10 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse justify-content-between" id="menu1">
-            <!--<a class="navbar-brand" href="#top">Renew Family</a>-->
+        <div class="collapse navbar-collapse justify-content-around" id="menu1">
             <ul class="navbar-nav">
                 <li class="nav-item {{if eq .PageName "index"}}active{{end}}">
-                    <a class="nav-link" href="http://www.renewalfamily.org/index-{{.Lang}}.html">
+                    <a class="nav-link" href="index-{{.Lang}}.html">
                         {{if eq .Lang "cn"}}
                         首页
                         {{else if eq .Lang "tw"}}
@@ -41,41 +40,82 @@
                         {{end}}
                     </a>
                 </li>
-                <li class="nav-item {{if eq .PageName "together"}}active{{end}}">
-                    <a class="nav-link" href="http://www.renewalfamily.org/yomkippur/{{.Lang}}.html">
+                <li class="nav-item dropdown {{if eq .PageName "together"}}active{{end}}">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         {{if eq .Lang "cn"}}
-                        "如同一人"聚集
+                        最新消息 <span class="badge badge-danger badge-pill">2</span>
                         {{else if eq .Lang "tw"}}
-                        "如同一人"聚集
+                        最新消息  <span class="badge badge-danger badge-pill">2</span>
                         {{else if eq .Lang "en"}}
-                        Together As One
+                        News <span class="badge badge-danger badge-pill">2</span>
                         {{end}}
                     </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="http://www.ihopuchinese.org/Artcle/Index?MenuId=26&NavigateId=28" target="_blank">
-                        {{if eq .Lang "cn"}}
-                        “匯集”回家聚集
-                        {{else if eq .Lang "tw"}}
-                        “匯集”回家聚集
-                        {{else if eq .Lang "en"}}
-                        “Convergence” Gathering
-                        {{end}}
-                    </a>
-                </li>
-                <li class="nav-item {{if eq .PageName "about"}}active{{end}}">
-                    <a class="nav-link" href="about-{{.Lang}}.html">
-                        {{if eq .Lang "cn"}}
-                        更新家庭
-                        {{else if eq .Lang "tw"}}
-                        更新家庭
-                        {{else if eq .Lang "en"}}
-                        Renewal Family
-                        {{end}}
-                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item {{if eq .PageName "together"}}active{{end}}" href="together-{{.Lang}}.html">
+                            {{if eq .Lang "cn"}}
+                            "如同一人"聚集 <span class="badge badge-danger badge-pill">新</span>
+                            {{else if eq .Lang "tw"}}
+                            "如同一人"聚集 <span class="badge badge-danger badge-pill">新</span>
+                            {{else if eq .Lang "en"}}
+                            Together As One <span class="badge badge-danger badge-pill">New</span>
+                            {{end}}
+
+                        </a>
+                        <a class="dropdown-item" href="http://www.ihopuchinese.org/Artcle/Index?MenuId=26&NavigateId=28" target="_blank">
+                            {{if eq .Lang "cn"}}
+                            “匯集”回家聚集 <span class="badge badge-danger badge-pill">新</span>
+                            {{else if eq .Lang "tw"}}
+                            “匯集”回家聚集 <span class="badge badge-danger badge-pill">新</span>
+                            {{else if eq .Lang "en"}}
+                            “Convergence” Gathering <span class="badge badge-danger badge-pill">New</span>
+                            {{end}}
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="www.renewalfamily.org/EstherArise1111/{{.Lang}}/index.html" target="_blank">
+                            {{if eq .Lang "cn"}}
+                            1111 聚集(2017)
+                            {{else if eq .Lang "tw"}}
+                            1111 聚集(2017)
+                            {{else if eq .Lang "en"}}
+                            1111 Gathering(2017)
+                            {{end}}
+                        </a>
+                    </div>
                 </li>
 
-            </ul>
+        <li class="nav-item dropdown {{if eq .PageName `renewal-family` `city-prayer-alter`}}active{{end}}">
+            <a class="nav-link dropdown-toggle" href="#" id="aboutItems" data-toggle="dropdown">
+                {{if eq .Lang "tw"}}
+                關於我們
+                {{else if eq .Lang "cn"}}
+                关于我们
+                {{else if eq .Lang "en"}}
+                About Us
+                {{end}}
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item {{if eq .PageName `renewal-family`}}active{{end}}" href="renewal-family-{{.Lang}}.html">
+                    {{if eq .Lang "tw"}}
+                    更新家庭
+                    {{else if eq .Lang "cn"}}
+                    更新家庭
+                    {{else if eq .Lang "en"}}
+                    Renewal Family
+                    {{end}}
+                </a>
+                <a class="dropdown-item {{if eq .PageName `city-prayer-alter`}}active{{end}}" href="/city-prayer-alter-{{.Lang}}.html">
+                    {{if eq .Lang "tw"}}
+                    城市禱告祭壇
+                    {{else if eq .Lang "cn"}}
+                    城市祷告祭坛
+                    {{else if eq .Lang "en"}}
+                    City Prayer Altar
+                    {{end}}
+                </a>
+            </div>
+        </li>
+    </ul>
 
             <ul class="navbar-nav">
                 {{if ne .Lang "en"}}
@@ -120,7 +160,7 @@
 {{block "tmContent" .}}Default Content{{end}}
 
 
-<footer class="footer text-white bg-dark mt-5">
+<div class="text-white bg-dark">
     <div class="container text-center py-3">
         <span><small>
         {{if eq .Lang "cn"}}
@@ -135,7 +175,7 @@
         {{end}}
         </small></span>
     </div>
-</footer>
+</div>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
