@@ -15,7 +15,15 @@ Renewal Family
         <div class="col-12 col-md-6 my-5">
             <div class="card bg2">
                 <a href="together-{{.Lang}}.html">
-                    <img class="card-img-top" src="static/shofar.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="static/shofar.jpg"
+                         {{if eq .Lang "cn"}}
+                         title="点击查看详情"
+                        {{else if eq .Lang "tw"}}
+                         title="點擊查看詳情"
+                        {{else if eq .Lang "en"}}
+                         title="Click for details"
+                        {{end}}
+                     data-toggle="tooltip">
                 </a>
                 <div class="card-body text-justify">
                     {{if eq .Lang "cn"}}
@@ -37,7 +45,15 @@ Renewal Family
         <div class="col-12 col-md-6 my-5">
             <div class="card bg1">
                 <a href="http://www.ihopuchinese.org/Artcle/Index?MenuId=26&NavigateId=28" target="_blank">
-                    <img class="card-img-top" src="static/convergence.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="static/convergence.jpg"
+                         {{if eq .Lang "cn"}}
+                        title="点击查看详情"
+                        {{else if eq .Lang "tw"}}
+                        title="點擊查看詳情"
+                        {{else if eq .Lang "en"}}
+                        title="Click for details"
+                        {{end}}
+                    data-toggle="tooltip">
                 </a>
                 <div class="card-body text-justify">
                     {{if eq .Lang "cn"}}
