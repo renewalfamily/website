@@ -21,6 +21,7 @@ var tmpDetails = []tmpDetail{
 	{"renewal-family", []string{"template/baseof.html", "template/renewal-family.html"}},
 	{"city-prayer-alter", []string{"template/baseof.html", "template/city-prayer-alter.html"}},
 	{"together", []string{"template/baseof.html", "template/together.html"}},
+	{"core-value", []string{"template/baseof.html", "template/core-value.html"}},
 }
 
 var supportedLangs = []string{"cn", "tw", "en"}
@@ -73,6 +74,7 @@ func hdGen(w http.ResponseWriter, r *http.Request) {
 		"renewal-family-cn.html", "renewal-family-tw.html", "renewal-family-en.html",
 		"city-prayer-alter-cn.html", "city-prayer-alter-tw.html", "city-prayer-alter-en.html",
 		"together-cn.html", "together-tw.html", "together-en.html",
+		"core-value-cn.html", "core-value-tw.html", "core-value-en.html",
 	}
 	for _, fileName := range staticFiles {
 		fullName := fmt.Sprintf("%v/%v", dst, fileName)
