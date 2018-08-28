@@ -21,7 +21,30 @@
 </head>
 <body>
 
-<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+<div class="bg-light">
+    <div class="container text-center">
+        <div class="col">
+            {{if ne .Lang "en"}}
+                <a class="btn btn-primary btn-sm text-light mr-1" href="{{.PageName}}-en.html">
+                    <img src="static/usa.png" alt="">English
+                </a>
+            {{end}}
+            {{if ne .Lang "cn"}}
+                <a class="btn btn-primary btn-sm text-light mr-1" href="{{.PageName}}-cn.html">
+                    <img src="static/china.png" alt="">简体
+                </a>
+            {{end}}
+            {{if ne .Lang "tw"}}
+                <a class="btn btn-primary btn-sm text-light mr-1" href="{{.PageName}}-tw.html">
+                    <img src="static/taiwan.png" alt="">繁體
+                </a>
+            {{end}}
+        </div>
+    </div>
+</div>
+
+<nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+<!--<nav class="navbar navbar-expand-sm navbar-dark bg-dark">-->
     <div class="container">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu1">
             <span class="navbar-toggler-icon"></span>
@@ -51,7 +74,7 @@
                         {{end}}
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item {{if eq .PageName "together"}}active{{end}}" href="together-{{.Lang}}.html">
+                        <a class="dropdown-item {{if eq .PageName "together"}}active{{end}}" href="together-{{.Lang}}.html?v1">
                             {{if eq .Lang "cn"}}
                             "如同一人"聚集 <span class="badge badge-danger badge-pill">新</span>
                             {{else if eq .Lang "tw"}}
@@ -82,6 +105,17 @@
                             {{end}}
                         </a>
                     </div>
+                </li>
+                <li class="nav-item {{if eq .PageName `awaken`}}active{{end}}">
+                    <a class="nav-link" href="/awaken-{{.Lang}}.html">
+                        {{if eq .Lang "tw"}}
+                        命定晨光
+                        {{else if eq .Lang "cn"}}
+                        命定晨光
+                        {{else if eq .Lang "en"}}
+                        Awaken the Dawn
+                        {{end}}
+                    </a>
                 </li>
 
                 <li class="nav-item {{if eq .PageName "core-value"}}active{{end}}">
@@ -128,48 +162,14 @@
         </li>
     </ul>
 
-            <ul class="navbar-nav">
-                {{if ne .Lang "en"}}
-                <li class="nav-item">
-                    <a class="nav-link text-light mr-1" href="{{.PageName}}-en.html">
-                        <img src="static/usa.png" alt="">English
-                    </a>
-                </li>
-                {{end}}
-                {{if ne .Lang "cn"}}
-                <li class="nav-item">
-                    <a class="nav-link text-light mr-1" href="{{.PageName}}-cn.html">
-                        <img src="static/china.png" alt="">简体
-                    </a>
-                </li>
-                {{end}}
-                {{if ne .Lang "tw"}}
-                <li class="nav-item">
-                    <a class="nav-link text-light mr-1" href="{{.PageName}}-tw.html">
-                        <img src="static/taiwan.png" alt="">繁體
-                    </a>
-                </li>
-                {{end}}
 
-            </ul>
         </div>
     </div>
 </nav>
 
 <div id="menu-height"></div>
-<!--<div class="alert alert-warning alert-dismissible fade show text-center" role="alert">-->
-    <!--{{if eq .Lang "cn"}}-->
-    <!--{{else if eq .Lang "tw"}}-->
-    <!--{{else if eq .Lang "en"}}-->
-    <!--<strong>Warning: </strong>More information to come. Return back for more information.-->
-    <!--{{end}}-->
-    <!--<button type="button" class="close" data-dismiss="alert" aria-label="Close">-->
-        <!--<span aria-hidden="true">&times;</span>-->
-    <!--</button>-->
-<!--</div>-->
 
 {{block "tmContent" .}}Default Content{{end}}
-
 
 <div class="text-white bg-dark">
     <div class="container text-center py-3">
