@@ -7,6 +7,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"path/filepath"
 	"strings"
 )
 
@@ -16,24 +17,42 @@ type tmpDetail struct {
 }
 
 // lists of the template name and the files to parse together
-var tmpDetails = []tmpDetail{
-	{"index", []string{"template/baseof.html", "template/index.html"}},
-	{"renewal-family", []string{"template/baseof.html", "template/renewal-family.html"}},
-	{"city-prayer-alter", []string{"template/baseof.html", "template/city-prayer-alter.html"}},
-	{"together", []string{"template/baseof.html", "template/together.html"}},
-	{"core-value", []string{"template/baseof.html", "template/core-value.html"}},
-}
+var tmpDetails []tmpDetail
 
 var supportedLangs = []string{"cn", "tw", "en"}
 
 //var re = regexp.MustCompile("([[:alpha:]]*)-([[:alpha:]]{2}).html$")
-
+var tmplDir = "template"
 var baseTemplate = "baseof.html"
+var tmplSuffix = ".html"
 var tmpls map[string]*template.Template
 
 // parse all the templates
 func init() {
 	tmpls = make(map[string]*template.Template)
+	tempFolder, err := os.Open(tmplDir)
+	if err != nil {
+		log.Fatal(err)
+	}
+	teplFileInfos, err := tempFolder.Readdir(-1)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	for _, fi := range teplFileInfos {
+		var d tmpDetail
+		name := fi.Name()
+		if name == baseTemplate {
+			continue
+		}
+		d.tmName = strings.TrimSuffix(name, tmplSuffix)
+		d.tmFileNames = []string{filepath.Join(tmplDir, baseTemplate), filepath.Join(tmplDir, name)}
+		tmpDetails = append(tmpDetails, d)
+
+	}
+
+	fmt.Println(tmpDetails)
+
 	for _, d := range tmpDetails {
 		tmpls[d.tmName] = template.Must(template.New(d.tmName).ParseFiles(d.tmFileNames...))
 	}
@@ -69,13 +88,15 @@ func hdIndex(w http.ResponseWriter, r *http.Request) {
 
 func hdGen(w http.ResponseWriter, r *http.Request) {
 	dst := "dst"
-	staticFiles := []string{
-		"index-cn.html", "index-tw.html", "index-en.html",
-		"renewal-family-cn.html", "renewal-family-tw.html", "renewal-family-en.html",
-		"city-prayer-alter-cn.html", "city-prayer-alter-tw.html", "city-prayer-alter-en.html",
-		"together-cn.html", "together-tw.html", "together-en.html",
-		"core-value-cn.html", "core-value-tw.html", "core-value-en.html",
+
+	var staticFiles []string
+	for _, t := range tmpDetails {
+		for _, l := range []string{"en", "cn", "tw"} {
+			staticFiles = append(staticFiles, fmt.Sprintf("%v_%v.html", t.tmName, l))
+		}
 	}
+	//fmt.Println(staticFiles)
+
 	for _, fileName := range staticFiles {
 		fullName := fmt.Sprintf("%v/%v", dst, fileName)
 		fmt.Println(fullName)
