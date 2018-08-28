@@ -1,0 +1,79 @@
+{{define "tmTitle"}}
+{{if eq .Lang "cn"}}
+核心价值
+{{else if eq .Lang "tw"}}
+核心價值
+{{else if eq .Lang "en"}}
+Core Values
+{{end}}
+{{end}}
+
+{{define "tmContent"}}
+
+
+<div class="container" id="awaken">
+
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center">
+            {{if eq .Lang "tw"}}
+            命定晨光
+            {{else if eq .Lang "cn"}}
+            命定晨光
+            {{else if eq .Lang "en"}}
+            Awaken the Dawn
+            {{end}}
+            </h1>
+        </div>
+    </div>
+
+    <div class="row pb-5">
+
+    <!--</div>-->
+
+        <div class="col-12 col-lg-6">
+            {{if eq .Lang "tw"}}
+            <!--<h1 class="text-center">命定晨光</h1>-->
+            <p>感謝主這一年讓我們每天早上5點起來“命定晨光”，在黎明母腹的時間藉著敬拜讚美，宣告和發命使神的同在和話語充滿城市的上空，為一天定調。歡迎你參加“命定晨光”空中禱告祭壇！</p>
+            <p>時間以溫哥華時間為準：</p>
+            <strong>普通話:</strong> 每天早上5點-6點半：<a href="https://zoom.us/j/7891619136">https://zoom.us/j/7891619136</a><br>
+            <strong>英語:</strong> 每天早上5-6點： <a href="https://zoom.us/j/229964114">https://zoom.us/j/229964114</a><br>
+            <strong>粵語:</strong> 每週二週四5-6點： <a href="https://zoom.us/j/160198428">https://zoom.us/j/160198428</a><br>
+            <p><strong>電話:</strong> 1-647-558-0588，會議室號7891619136#<br>(但請注意這是加拿大多倫多長途號碼，如果你沒有全國電話計劃就要付長途電話費。)</p>
+
+            {{else if eq .Lang "cn"}}
+            <!--<h1 class="text-center">命定晨光</h1>-->
+            <p>感谢主这一年让我们每天早上5点起来“命定晨光”，在黎明母腹的时间借着敬拜赞美，宣告和发命使神的同在和话语充满城市的上空，为一天定调。欢迎你参加“命定晨光”空中祷告祭坛！</p>
+            <p>时间以温哥华时间为准：</p>
+            <strong>普通话:</strong> 每天早上5点-6点半：<a href="https://zoom.us/j/7891619136">https://zoom.us/j/7891619136</a><br>
+            <strong>英语:</strong> 每天早上5-6点： <a href="https://zoom.us/j/229964114">https://zoom.us/j/229964114</a><br>
+            <strong>粤语:</strong> 每周二周四5-6点： <a href="https://zoom.us/j/160198428">https://zoom.us/j/160198428</a><br>
+            <strong>电话:</strong> 1-647-558-0588，会议室号7891619136#<br>
+            (但请注意这是加拿大多伦多号码，如果你没有全国电话计划就要付长途电话费。)</p>
+
+            {{else if eq .Lang "en"}}
+            <!--<h1 class="text-center">Awaken the Dawn</h1>-->
+            <div class="text-justify">
+            <p>Praise the Lord for calling us to Awaken the Dawn! This year has been amazing - praying, praising, declaring and filling the airwaves with His powerful Presence and Word, and setting the tone for each new day!</p>
+            <p>We invite you to join us in “Awaken the Dawn”, our prayer altar in the air! Please note the prayer time is Vancouver time.</p>
+            </div>
+            <p><strong>English</strong> (5:00 - 6:00 am everyday) <a href="https://zoom.us/j/229964114">https://zoom.us/j/229964114</a><br>
+            <strong>Mandarin</strong> (5:00 - 6:30 am everyday) <a href="https://zoom.us/j/7891619136">https://zoom.us/j/7891619136</a><br>
+            <strong>Cantonese</strong> (5:00 - 6:00 am Tuesday &amp; Thursday) <a href="https://zoom.us/j/160198428">https://zoom.us/j/160198428</a><br>
+            By phone line, Canada long distance: 1-647-558-0588 access number 229964114 for English prayer room.</p>>
+            {{end}}
+            <!--<div class="text-center pt-5">-->
+                <!--<iframe width="640" height="360" src="https://www.youtube.com/embed/17r51bM4iYI?rel=0" frameborder="0" allowfullscreen></iframe>-->
+            <!--</div>-->
+        </div>
+
+        <div class="col-12 col-lg-6 text-justify mx-auto">
+            <div class="embed-responsive embed-responsive-16by9 mb-3">
+                <!--<iframe width="480" height="270" src="https://www.youtube.com/embed/17r51bM4iYI?rel=0" frameborder="0" allowfullscreen></iframe>-->
+                <iframe class="embed-responsive-item" width="640" height="360" src="https://www.youtube.com/embed/17r51bM4iYI?rel=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{end}}
