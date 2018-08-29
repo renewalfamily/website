@@ -92,7 +92,7 @@ func hdGen(w http.ResponseWriter, r *http.Request) {
 	var staticFiles []string
 	for _, t := range tmpDetails {
 		for _, l := range []string{"en", "cn", "tw"} {
-			staticFiles = append(staticFiles, fmt.Sprintf("%v_%v.html", t.tmName, l))
+			staticFiles = append(staticFiles, fmt.Sprintf("%v-%v.html", t.tmName, l))
 		}
 	}
 	//fmt.Println(staticFiles)
