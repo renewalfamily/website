@@ -9,7 +9,7 @@ Renewal Family
 {{end}}
 
 {{define "tmContent"}}
-
+<div class="bg2 pb-5">
 <div class="container my-3" id="index">
     <div class="row">
         <div class="col-12 col-lg-11 col-xl-10 mx-auto">
@@ -45,13 +45,44 @@ Renewal Family
         </div>
     </div>
 </div>
-
-<div class="container">
+</div>
+<div class="container pb-3">
     <div class="row">
         <div class="col-12 col-sm-6 col-lg-4 my-3">
             <div class="card bg1">
-                <a href="http://www.ihopuchinese.org/Artcle/Index?MenuId=26&NavigateId=28" target="_blank">
-                    <img class="card-img-top" src="static/convergence.jpg"
+                <a href="renewal-family-{{.Lang}}.html">
+                    <img class="card-img-top" src="static/rf2.jpg"
+                     {{if eq .Lang "cn"}}
+                    title="点击查看详情"
+                    {{else if eq .Lang "tw"}}
+                    title="點擊查看詳情"
+                    {{else if eq .Lang "en"}}
+                    title="Click for details"
+                    {{end}}
+                    data-toggle="tooltip">
+                </a>
+                <div class="card-body text-justify">
+                    {{if eq .Lang "cn"}}
+                    <h4 class="card-title">更新家庭</h4>
+                    <p class="card-text">更新家庭原名更新团契。1996年，神感动一群温哥华的牧者，在城市的父老赵仲权牧师的带领之下， 愿意超越自己的事工，单单渴慕主在温哥华找到祂的安息之所！</p>
+                    <a class="btn btn-primary" href="http://www.ihopuchinese.org/Artcle/Index?MenuId=26&NavigateId=28" target="_blank">点击进入</a>
+                    {{else if eq .Lang "tw"}}
+                    <h4 class="card-title">更新家庭</h4>
+                    <p class="card-text">更新家庭原名更新團契。1996年，神感動一群溫哥華的牧者，在城市的父老趙仲權牧師的帶領之下， 願意超越自己的事工，單單渴慕主在溫哥華找到祂的安息之所！</p>
+                    <a class="btn btn-primary" href="http://www.ihopuchinese.org/Artcle/Index?MenuId=26&NavigateId=28" target="_blank">點擊進入</a>
+                    {{else if eq .Lang "en"}}
+                    <h4 class="card-title">Renewal Family</h4>
+                    <p class="card-text">Renewal Family, was originally Renewal Fellowship, founded in 1996, was made up of a group of pastors from different denominations, led by the spirit of the Lord. Pastor Gideon Chiu is the father...</p>
+                    <a class="btn btn-primary" href="renewal-family-{{.Lang}}.html">Go</a>
+                    {{end}}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4 my-3">
+            <div class="card bg1">
+                <a href="city-prayer-alter-{{.Lang}}.html">
+                    <img class="card-img-top" src="static/pray1.jpg"
                          {{if eq .Lang "cn"}}
                     title="点击查看详情"
                     {{else if eq .Lang "tw"}}
@@ -63,19 +94,17 @@ Renewal Family
                 </a>
                 <div class="card-body text-justify">
                     {{if eq .Lang "cn"}}
-                    <h4 class="card-title">“匯集”回家聚集</h4>
-                    <p class="card-text">「匯集」是由北美华人召集的一次回家聚集。我们寻求神的时候，神把美国IHOPKC（国际祷告殿）的门打开，让我们在美国中部举办这个聚集，
-                        祂的心意是要带下极大的合一，族裔的合一，东西方的合一，不同宗派的合一。从合一的权柄中，祂要在一群寻求祂面的百姓里面施行奇事。</p>
+                    <h4 class="card-title">城市祷告祭坛</h4>
+                    <p class="card-text">从2014年底，藉着城市众长老的鼓励和遮盖及先知Imiel话语的印证，我们开始了城市性的聚集祷告。...神让我们更频繁地在一起，成为一个城市祷告祭坛。</p>
                     <a class="btn btn-primary" href="http://www.ihopuchinese.org/Artcle/Index?MenuId=26&NavigateId=28" target="_blank">点击进入</a>
                     {{else if eq .Lang "tw"}}
-                    <h4 class="card-title">“匯集”回家聚集</h4>
-                    <p class="card-text">「匯集」是由北美華人召集的一次回家聚集。我們尋求神的時候，神把美國IHOPKC（國際禱告殿）的門打開，讓我們在美國中部舉辦這個聚集，
-                        祂的心意是要帶下極大的合一，族裔的合一，東西方的合一，不同宗派的合一。從合一的權柄中，祂要在一群尋求祂面的百姓裏面施行奇事。</p>
+                    <h4 class="card-title">城市禱告祭壇</h4>
+                    <p class="card-text">從2014年底，藉著城市眾長老的鼓勵和遮蓋及先知Imiel話語的印証，我們開始了城市性的聚集禱告。...神讓我們更頻繁地在一起，成為一個城市禱告祭壇。</p>
                     <a class="btn btn-primary" href="http://www.ihopuchinese.org/Artcle/Index?MenuId=26&NavigateId=28" target="_blank">點擊進入</a>
                     {{else if eq .Lang "en"}}
-                    <h4 class="card-title">Convergence <small>- North American Gathering</small></h4>
-                    <p class="card-text">Convergence is a gathering called by a group of North American Chinese. When they sought the Lord, the Lord opened the door of IHOPKC to host this gathering. We believe His heart is for unification; unification of people groups, of East and the West and of the Christian denominations. When we are truly unified, we will have godly authority. The Lord is about to perform His wonders among a group of people who are unified in seekingHis face.</p>
-                    <a class="btn btn-primary" href="http://www.ihopuchinese.org/Artcle/Index?MenuId=26&NavigateId=28" target="_blank">Go</a>
+                    <h4 class="card-title">City Prayer Altar</h4>
+                    <p class="card-text">We started City Prayer Altar by the confirmation of the fathers and Prophet Imeil’s words, in 2014. Although we already had monthly joint prayer meeting, the Lord increased our frequency to make it... </p>
+                    <a class="btn btn-primary" href="city-prayer-alter-{{.Lang}}.html">Go</a>
                     {{end}}
                 </div>
             </div>
@@ -84,7 +113,7 @@ Renewal Family
         <div class="col-12 col-sm-6 col-lg-4 my-3">
             <div class="card bg1">
                 <a href="http://www.ihopuchinese.org/Artcle/Index?MenuId=26&NavigateId=28" target="_blank">
-                    <img class="card-img-top" src="static/convergence.jpg"
+                    <img class="card-img-top" src="static/convergence-s.jpg"
                          {{if eq .Lang "cn"}}
                     title="点击查看详情"
                     {{else if eq .Lang "tw"}}
@@ -97,50 +126,15 @@ Renewal Family
                 <div class="card-body text-justify">
                     {{if eq .Lang "cn"}}
                     <h4 class="card-title">“匯集”回家聚集</h4>
-                    <p class="card-text">「匯集」是由北美华人召集的一次回家聚集。我们寻求神的时候，神把美国IHOPKC（国际祷告殿）的门打开，让我们在美国中部举办这个聚集，
-                        祂的心意是要带下极大的合一，族裔的合一，东西方的合一，不同宗派的合一。从合一的权柄中，祂要在一群寻求祂面的百姓里面施行奇事。</p>
+                    <p class="card-text">「匯集」是由北美华人召集的一次回家聚集。我们寻求神的时候，神把美国IHOPKC（国际祷告殿）的门打开，让我们在美国中部举办这个聚集...</p>
                     <a class="btn btn-primary" href="http://www.ihopuchinese.org/Artcle/Index?MenuId=26&NavigateId=28" target="_blank">点击进入</a>
                     {{else if eq .Lang "tw"}}
                     <h4 class="card-title">“匯集”回家聚集</h4>
-                    <p class="card-text">「匯集」是由北美華人召集的一次回家聚集。我們尋求神的時候，神把美國IHOPKC（國際禱告殿）的門打開，讓我們在美國中部舉辦這個聚集，
-                        祂的心意是要帶下極大的合一，族裔的合一，東西方的合一，不同宗派的合一。從合一的權柄中，祂要在一群尋求祂面的百姓裏面施行奇事。</p>
+                    <p class="card-text">「匯集」是由北美華人召集的一次回家聚集。我們尋求神的時候，神把美國IHOPKC（國際禱告殿）的門打開，讓我們在美國中部舉辦這個聚集...</p>
                     <a class="btn btn-primary" href="http://www.ihopuchinese.org/Artcle/Index?MenuId=26&NavigateId=28" target="_blank">點擊進入</a>
                     {{else if eq .Lang "en"}}
-                    <h4 class="card-title">Convergence <small>- North American Gathering</small></h4>
-                    <p class="card-text">Convergence is a gathering called by a group of North American Chinese. When they sought the Lord, the Lord opened the door of IHOPKC to host this gathering. We believe His heart is for unification; unification of people groups, of East and the West and of the Christian denominations. When we are truly unified, we will have godly authority. The Lord is about to perform His wonders among a group of people who are unified in seekingHis face.</p>
-                    <a class="btn btn-primary" href="http://www.ihopuchinese.org/Artcle/Index?MenuId=26&NavigateId=28" target="_blank">Go</a>
-                    {{end}}
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-lg-4 my-3">
-            <div class="card bg1">
-                <a href="http://www.ihopuchinese.org/Artcle/Index?MenuId=26&NavigateId=28" target="_blank">
-                    <img class="card-img-top" src="static/convergence.jpg"
-                         {{if eq .Lang "cn"}}
-                    title="点击查看详情"
-                    {{else if eq .Lang "tw"}}
-                    title="點擊查看詳情"
-                    {{else if eq .Lang "en"}}
-                    title="Click for details"
-                    {{end}}
-                    data-toggle="tooltip">
-                </a>
-                <div class="card-body text-justify">
-                    {{if eq .Lang "cn"}}
-                    <h4 class="card-title">“匯集”回家聚集</h4>
-                    <p class="card-text">「匯集」是由北美华人召集的一次回家聚集。我们寻求神的时候，神把美国IHOPKC（国际祷告殿）的门打开，让我们在美国中部举办这个聚集，
-                        祂的心意是要带下极大的合一，族裔的合一，东西方的合一，不同宗派的合一。从合一的权柄中，祂要在一群寻求祂面的百姓里面施行奇事。</p>
-                    <a class="btn btn-primary" href="http://www.ihopuchinese.org/Artcle/Index?MenuId=26&NavigateId=28" target="_blank">点击进入</a>
-                    {{else if eq .Lang "tw"}}
-                    <h4 class="card-title">“匯集”回家聚集</h4>
-                    <p class="card-text">「匯集」是由北美華人召集的一次回家聚集。我們尋求神的時候，神把美國IHOPKC（國際禱告殿）的門打開，讓我們在美國中部舉辦這個聚集，
-                        祂的心意是要帶下極大的合一，族裔的合一，東西方的合一，不同宗派的合一。從合一的權柄中，祂要在一群尋求祂面的百姓裏面施行奇事。</p>
-                    <a class="btn btn-primary" href="http://www.ihopuchinese.org/Artcle/Index?MenuId=26&NavigateId=28" target="_blank">點擊進入</a>
-                    {{else if eq .Lang "en"}}
-                    <h4 class="card-title">Convergence <small>- North American Gathering</small></h4>
-                    <p class="card-text">Convergence is a gathering called by a group of North American Chinese. When they sought the Lord, the Lord opened the door of IHOPKC to host this gathering. We believe His heart is for unification; unification of people groups, of East and the West and of the Christian denominations. When we are truly unified, we will have godly authority. The Lord is about to perform His wonders among a group of people who are unified in seekingHis face.</p>
+                    <h4 class="card-title">Convergence</small></h4>
+                    <p class="card-text">Convergence is a gathering called by a group of North American Chinese. When they sought the Lord, the Lord opened the door of IHOPKC to host this gathering. We believe His heart is for unification; ...</p>
                     <a class="btn btn-primary" href="http://www.ihopuchinese.org/Artcle/Index?MenuId=26&NavigateId=28" target="_blank">Go</a>
                     {{end}}
                 </div>
