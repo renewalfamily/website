@@ -21,28 +21,6 @@
 </head>
 <body>
 
-<div class="bg-light">
-    <div class="container text-center">
-        <div class="col">
-            {{if ne .Lang "en"}}
-                <a class="btn btn-primary btn-sm text-light mr-1" href="{{.PageName}}-en.html">
-                    <img src="static/usa.png" alt="">English
-                </a>
-            {{end}}
-            {{if ne .Lang "cn"}}
-                <a class="btn btn-primary btn-sm text-light mr-1" href="{{.PageName}}-cn.html">
-                    <img src="static/china.png" alt="">简体
-                </a>
-            {{end}}
-            {{if ne .Lang "tw"}}
-                <a class="btn btn-primary btn-sm text-light mr-1" href="{{.PageName}}-tw.html">
-                    <img src="static/taiwan.png" alt="">繁體
-                </a>
-            {{end}}
-        </div>
-    </div>
-</div>
-
 <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
 <!--<nav class="navbar navbar-expand-sm navbar-dark bg-dark">-->
     <div class="container">
@@ -129,43 +107,81 @@
                     {{end}}
                 </a>
                 </li>
-        <li class="nav-item dropdown {{if eq .PageName `renewal-family` `city-prayer-alter`}}active{{end}}">
-            <a class="nav-link dropdown-toggle" href="#" id="aboutItems" data-toggle="dropdown">
-                {{if eq .Lang "tw"}}
-                關於我們
-                {{else if eq .Lang "cn"}}
-                关于我们
-                {{else if eq .Lang "en"}}
-                About Us
+                <li class="nav-item dropdown {{if eq .PageName `renewal-family` `city-prayer-alter`}}active{{end}}">
+                    <a class="nav-link dropdown-toggle" href="#" id="aboutItems" data-toggle="dropdown">
+                        {{if eq .Lang "tw"}}
+                        關於我們
+                        {{else if eq .Lang "cn"}}
+                        关于我们
+                        {{else if eq .Lang "en"}}
+                        About Us
+                        {{end}}
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item {{if eq .PageName `renewal-family`}}active{{end}}" href="renewal-family-{{.Lang}}.html">
+                            {{if eq .Lang "tw"}}
+                            更新家庭
+                            {{else if eq .Lang "cn"}}
+                            更新家庭
+                            {{else if eq .Lang "en"}}
+                            Renewal Family
+                            {{end}}
+                        </a>
+                        <a class="dropdown-item {{if eq .PageName `city-prayer-alter`}}active{{end}}" href="/city-prayer-alter-{{.Lang}}.html">
+                            {{if eq .Lang "tw"}}
+                            城市禱告祭壇
+                            {{else if eq .Lang "cn"}}
+                            城市祷告祭坛
+                            {{else if eq .Lang "en"}}
+                            City Prayer Altar
+                            {{end}}
+                        </a>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="d-none d-md-block">
+                {{if ne .Lang "en"}}
+                <a class="btn btn-primary btn-sm text-light mr-1" href="{{.PageName}}-en.html">
+                    <img src="static/usa.png" alt="">English
+                </a>
                 {{end}}
-            </a>
-            <div class="dropdown-menu">
-                <a class="dropdown-item {{if eq .PageName `renewal-family`}}active{{end}}" href="renewal-family-{{.Lang}}.html">
-                    {{if eq .Lang "tw"}}
-                    更新家庭
-                    {{else if eq .Lang "cn"}}
-                    更新家庭
-                    {{else if eq .Lang "en"}}
-                    Renewal Family
-                    {{end}}
+                {{if ne .Lang "cn"}}
+                <a class="btn btn-primary btn-sm text-light mr-1" href="{{.PageName}}-cn.html">
+                    <img src="static/china.png" alt="">简体
                 </a>
-                <a class="dropdown-item {{if eq .PageName `city-prayer-alter`}}active{{end}}" href="/city-prayer-alter-{{.Lang}}.html">
-                    {{if eq .Lang "tw"}}
-                    城市禱告祭壇
-                    {{else if eq .Lang "cn"}}
-                    城市祷告祭坛
-                    {{else if eq .Lang "en"}}
-                    City Prayer Altar
-                    {{end}}
+                {{end}}
+                {{if ne .Lang "tw"}}
+                <a class="btn btn-primary btn-sm text-light mr-1" href="{{.PageName}}-tw.html">
+                    <img src="static/taiwan.png" alt="">繁體
                 </a>
+                {{end}}
             </div>
-        </li>
-    </ul>
-
-
         </div>
     </div>
 </nav>
+
+<div class="bg-light d-block d-md-none">
+    <div class="container text-center">
+        <div class="col">
+            {{if ne .Lang "en"}}
+            <a class="btn btn-primary btn-sm text-light mr-1" href="{{.PageName}}-en.html">
+                <img src="static/usa.png" alt="">English
+            </a>
+            {{end}}
+            {{if ne .Lang "cn"}}
+            <a class="btn btn-primary btn-sm text-light mr-1" href="{{.PageName}}-cn.html">
+                <img src="static/china.png" alt="">简体
+            </a>
+            {{end}}
+            {{if ne .Lang "tw"}}
+            <a class="btn btn-primary btn-sm text-light mr-1" href="{{.PageName}}-tw.html">
+                <img src="static/taiwan.png" alt="">繁體
+            </a>
+            {{end}}
+        </div>
+    </div>
+</div>
 
 <div id="menu-height"></div>
 
