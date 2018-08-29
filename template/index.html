@@ -141,6 +141,37 @@ Renewal Family
             </div>
         </div>
 
+       <div class="col-12 col-sm-6 col-lg-4 my-3">
+            <div class="card bg1">
+                <a href="city-prayer-alter-{{.Lang}}.html">
+                    <img class="card-img-top" src="static/pray1.jpg"
+                     {{if eq .Lang "cn"}}
+                    title="点击查看详情"
+                    {{else if eq .Lang "tw"}}
+                    title="點擊查看詳情"
+                    {{else if eq .Lang "en"}}
+                    title="Click for details"
+                    {{end}}
+                    data-toggle="tooltip">
+                </a>
+                <div class="card-body text-justify">
+                    {{if eq .Lang "cn"}}
+                    <h4 class="card-title">核心价值</h4>
+                    <p class="card-text">家人同行，这是一个旅程，是一条道路，我们从那里开始都不重要，重要是它源于： 一. 天父的呼唤; 二. 一个从未经历过的旅程; 三. 遵主启示前行...</p>
+                    <a class="btn btn-primary" href="http://www.ihopuchinese.org/Artcle/Index?MenuId=26&NavigateId=28" target="_blank">点击进入</a>
+                    {{else if eq .Lang "tw"}}
+                    <h4 class="card-title">核心價值</h4>
+                    <p class="card-text">家人同行，這是一個旅程，是一條道路，我們從那裡開始都不重要，重要是它源於： 一. 天父的呼喚;二. 一個從未經歷過的旅程; 三. 遵主啟示前行...</p>
+                    <a class="btn btn-primary" href="http://www.ihopuchinese.org/Artcle/Index?MenuId=26&NavigateId= 28" target="_blank">點擊進入</a>
+                    {{else if eq .Lang "en"}}
+                    <h4 class="card-title">Core Values</h4>
+                    <p class="card-text">Family Journey is a journey and a pathway. Where we join in is not important. What matters is where the pathway began: 1. The Call of the Father; 2. A Journey Never ... </p>
+                    <a class="btn btn-primary" href="city-prayer-alter-{{.Lang}}.html">Go</a>
+                    {{end}}
+                </div>
+            </div>
+        </div>
+
         <div class="col-12 col-sm-6 col-lg-4 my-3">
             <div class="card bg1">
                 <a href="http://www.ihopuchinese.org/Artcle/Index?MenuId=26&NavigateId=28" target="_blank">
