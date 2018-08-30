@@ -163,3 +163,49 @@ func hdTemplate(w io.Writer, path string) error {
 		tmName,
 	})
 }
+
+func copyAll(src, dst string) {
+	srcDir := src
+	//srcDir := `c:\andrew\prg\sqlite`
+	dstDir := dst
+
+	c := 0
+	err := filepath.Walk(srcDir, func(path string, info os.FileInfo, err error) error {
+		if err != nil {
+			return fmt.Errorf("walk err - path: %v: %v", path, err)
+		}
+		// normal file
+		df := filepath.Join(dstDir, strings.TrimLeft(path, srcDir))
+
+		if info.IsDir() {
+			fmt.Println("in isdir", path)
+			if err = os.MkdirAll(df, 666); err != nil {
+				if !os.IsExist(err) {
+					return fmt.Errorf("mkdir err - path: %v: %v", df, err)
+				}
+				log.Println("created dir: ", path)
+				return nil
+			}
+			fmt.Println("dir created", df)
+			return nil
+		}
+		dh, err := os.Create(df)
+		if err != nil {
+			return fmt.Errorf("create file err - name: %v: %v", df, err)
+		}
+		defer dh.Close()
+
+		sh, err := os.Open(path)
+		if err != nil {
+			return fmt.Errorf("open file err - name: %v: %v", path, err)
+		}
+		defer sh.Close()
+
+		_, err = io.Copy(dh, sh)
+		c++
+		fmt.Println(df, "done.")
+		return err
+	})
+
+	fmt.Println(err, c)
+}
