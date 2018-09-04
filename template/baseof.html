@@ -107,7 +107,7 @@
                     </a>
                 </li>
 
-                <li class="nav-item {{if eq .PageName "core-value"}}active{{end}}">
+               {{/* <li class="nav-item {{if eq .PageName "core-value"}}active{{end}}">
                 <a class="nav-link" href="core-value-{{.Lang}}.html">
                     {{if eq .Lang "cn"}}
                     核心价值
@@ -117,8 +117,8 @@
                     Core Values
                     {{end}}
                 </a>
-                </li>
-                <li class="nav-item dropdown {{if eq .PageName `renewal-family` `city-prayer-alter`}}active{{end}}">
+                </li>*/}}
+                <li class="nav-item dropdown {{if eq .PageName `renewal-family` `city-prayer-alter` `core-value`}}active{{end}}">
                     <a class="nav-link dropdown-toggle" href="#" id="aboutItems" data-toggle="dropdown">
                         {{if eq .Lang "tw"}}
                         關於我們
@@ -145,6 +145,16 @@
                             城市祷告祭坛
                             {{else if eq .Lang "en"}}
                             City Prayer Altar
+                            {{end}}
+                        </a>
+
+                        <a class="dropdown-item {{if eq .PageName `core-value`}}active{{end}}"  href="core-value-{{.Lang}}.html">
+                            {{if eq .Lang "cn"}}
+                                核心价值
+                            {{else if eq .Lang "tw"}}
+                                核心價值
+                            {{else if eq .Lang "en"}}
+                                Core Values
                             {{end}}
                         </a>
                     </div>
