@@ -89,6 +89,26 @@ func hdIndex(w http.ResponseWriter, r *http.Request) {
 func hdGen(w http.ResponseWriter, r *http.Request) {
 	dst := "dst"
 
+	fi, err := os.Stat(dst)
+	if err != nil {
+		if os.IsNotExist(err) {
+			if err := os.MkdirAll(dst, 0777); err != nil {
+				fmt.Printf("can't create folder %v\n", dst)
+				fmt.Fprint(w, err)
+				return
+			}
+		} else {
+			fmt.Printf("os.Stat error: %v\n", dst)
+			fmt.Fprint(w, err)
+		}
+
+	} else {
+		if !fi.IsDir() {
+			fmt.Fprint(w, "dst is not a folder")
+		}
+	}
+
+	fmt.Print("Generating files... ")
 	var staticFiles []string
 	for _, t := range tmpDetails {
 		for _, l := range []string{"en", "cn", "tw"} {
@@ -100,39 +120,37 @@ func hdGen(w http.ResponseWriter, r *http.Request) {
 	for _, fileName := range staticFiles {
 		fullName := fmt.Sprintf("%v/%v", dst, fileName)
 		fmt.Println(fullName)
-		writeToFile(fullName)
+		if err := writeToFile(fullName); err != nil {
+			fmt.Fprint(w, err)
+			return
+		}
 	}
 	fmt.Println("done.")
-	fmt.Fprintf(w, "Done.", nil)
+
+	fmt.Print("Copying static folder... ")
+	if err := copyAll("static", filepath.Join(dst, "static")); err != nil {
+		fmt.Print("failed: ", err)
+		fmt.Fprintf(w, "internal error: failed to copy static folder: %v", err)
+		return
+	}
+	fmt.Println("Done.")
+
+	fmt.Fprint(w, "All Done.")
 }
 
-func writeToFile(fullName string) {
+func writeToFile(fullName string) error {
 
 	f, err := os.Create(fullName)
 	if err != nil {
-		fmt.Println(" ...Failed.")
-		log.Fatal(err)
-		return
+		fmt.Println(" ...Failed.", err)
+		return err
 	}
 	defer f.Close()
 
-	hdTemplate(f, fullName)
+	return hdTemplate(f, fullName)
 }
 
 func hdTemplate(w io.Writer, path string) error {
-
-	//match := re.FindAllStringSubmatch(path, 1)
-	//if match == nil {
-	//	return fmt.Errorf("hdIndex: can't find match filename and land from path: %v\n", path)
-	//}
-	//
-	//tmName := match[0][1]
-	//_, ok := tmpls[tmName]
-	//if !ok {
-	//	fmt.Printf("hdIndex: can't find the template %v", tmName)
-	//}
-	//
-	//lang := match[0][2]
 
 	tmName := ""
 	for _, name := range tmpDetails {
@@ -164,7 +182,7 @@ func hdTemplate(w io.Writer, path string) error {
 	})
 }
 
-func copyAll(src, dst string) {
+func copyAll(src, dst string) error {
 	srcDir := src
 	//srcDir := `c:\andrew\prg\sqlite`
 	dstDir := dst
@@ -179,7 +197,7 @@ func copyAll(src, dst string) {
 
 		if info.IsDir() {
 			fmt.Println("in isdir", path)
-			if err = os.MkdirAll(df, 666); err != nil {
+			if err = os.MkdirAll(df, 0777); err != nil {
 				if !os.IsExist(err) {
 					return fmt.Errorf("mkdir err - path: %v: %v", df, err)
 				}
@@ -207,5 +225,6 @@ func copyAll(src, dst string) {
 		return err
 	})
 
-	fmt.Println(err, c)
+	fmt.Println(c)
+	return err
 }
