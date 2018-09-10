@@ -25,124 +25,82 @@ Renewal Family
                 data-toggle="tooltip">
             </a>
         </div>-->
-        <div class="col-12 col-md-10 col-xl-9 text-center mx-auto">
-            <div class="h4 text-center my-3">
-            {{if eq .Lang "cn"}}
-                5779 犹太新年吹角节聚集
-            {{else if eq .Lang "tw"}}
-                5779 猶太新年吹角節聚集
-            {{else if eq .Lang "en"}}
-                5779 New Year Gathering
-            {{end}}
-            </div>
+        <div class="col-xl-6 col-lg-7 d-none d-lg-block">
+            <img src="static/BlowShofar.jpg" class="img-fluid" alt="">
+        </div>
 
-            <table class="table table-dark table-bordered table-striped">
-                <thead>
-                <tr>
-                    <th scope="col">
-                        {{if eq .Lang "cn"}}
-                        场  次
-                        {{else if eq .Lang "tw"}}
-                        場  次
-                        {{else if eq .Lang "en"}}
-                        Session#
-                        {{end}}
-                    </th>
-                    <th scope="col">
-                        {{if eq .Lang "cn"}}
-                        录相链接
-                        {{else if eq .Lang "tw"}}
-                        錄相鏈接
-                        {{else if eq .Lang "en"}}
-                        Youtube Links
-                        {{end}}
-                    </th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">
-                        2018-09-07
-                        {{if eq .Lang "cn"}}
-                        晚上
-                        {{else if eq .Lang "tw"}}
-                        晚上
-                        {{else if eq .Lang "en"}}
-                        Evening
-                        {{end}}
-                    </th>
-                    <td><a href="https://youtu.be/ZeX-ydVas2Y" target="_blank">https://youtu.be/ZeX-ydVas2Y</a></td>
-                </tr>
-                <tr>
-                    <th scope="row">
-                        2018-09-08
-                        {{if eq .Lang "cn"}}
-                        早上
-                        {{else if eq .Lang "tw"}}
-                        早上
-                        {{else if eq .Lang "en"}}
-                        Morning
-                        {{end}}
-                    </th>
-                    <td><a href="https://youtu.be/rUhkPqthz2Y" target="_blank">https://youtu.be/rUhkPqthz2Y</a></td>
-                </tr>
-                <tr>
-                    <th scope="row">
-                        2018-09-08
-                        {{if eq .Lang "cn"}}
-                        下午
-                        {{else if eq .Lang "tw"}}
-                        下午
-                        {{else if eq .Lang "en"}}
-                        Afternoon
-                        {{end}}
-                    </th>
-                    <td><a href="https://youtu.be/1AMzw_5bn6Q" target="_blank">https://youtu.be/1AMzw_5bn6Q</a></td>
-                </tr>
-                <tr>
-                    <th scope="row">
-                        2018-09-08
-                        {{if eq .Lang "cn"}}
-                        晚上
-                        {{else if eq .Lang "tw"}}
-                        晚上
-                        {{else if eq .Lang "en"}}
-                        Evening
-                        {{end}}
-                    </th>
-                    <td>
-                        {{if eq .Lang "cn"}}
-                        正在制作
-                        {{else if eq .Lang "tw"}}
-                        正在製作
-                        {{else if eq .Lang "en"}}
-                        Coming Soon
-                        {{end}}
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">
-                        2018-09-09
-                        {{if eq .Lang "cn"}}
-                        下午
-                        {{else if eq .Lang "tw"}}
-                        下午
-                        {{else if eq .Lang "en"}}
-                        Afternoon
-                        {{end}}
-                    </th>
-                    <td>
-                        {{if eq .Lang "cn"}}
-                        正在制作
-                        {{else if eq .Lang "tw"}}
-                        正在製作
-                        {{else if eq .Lang "en"}}
-                        Coming Soon
-                        {{end}}
-                    </td>
-                </tr>
-                </tbody>
-            </table>
+        <div class="col-12 col-lg-5 col-xl-6 text-center">
+            <div class="list-group">
+                <a href="" class="list-group-item h5">
+                {{if eq .Lang "cn"}}
+                    5779 犹太新年吹角节聚集
+                {{else if eq .Lang "tw"}}
+                    5779 猶太新年吹角節聚集
+                {{else if eq .Lang "en"}}
+                    5779 New Year Gathering
+                {{end}}
+                </a>
+
+                <a href="https://www.youtube.com/watch?v=ZeX-ydVas2Y" target="_blank" class="list-group-item list-group-item-action">
+                    2018-09-07
+                {{if eq .Lang "cn"}}
+                    晚上
+                {{else if eq .Lang "tw"}}
+                    晚上
+                {{else if eq .Lang "en"}}
+                    Evening
+                {{end}}
+                    <img src="static/play-button.png" alt="">
+                </a>
+                <a href="https://www.youtube.com/watch?v=rUhkPqthz2Y" target="_blank" class="list-group-item list-group-item-action">
+                    2018-09-08
+                {{if eq .Lang "cn"}}
+                    早上
+                {{else if eq .Lang "tw"}}
+                    早上
+                {{else if eq .Lang "en"}}
+                    Morning
+                {{end}}
+                    <img src="static/play-button.png" alt="">
+                </a>
+
+                <a href="https://www.youtube.com/watch?v=1AMzw_5bn6Q" target="_blank" class="list-group-item list-group-item-action">
+                    2018-09-08
+                {{if eq .Lang "cn"}}
+                    下午
+                {{else if eq .Lang "tw"}}
+                    下午
+                {{else if eq .Lang "en"}}
+                    Afternoon
+                {{end}}
+                    <img src="static/play-button.png" alt="">
+                </a>
+
+                <a href="#" class="list-group-item list-group-item-action">
+                    2018-09-08
+                {{if eq .Lang "cn"}}
+                    晚上 (正在制作)
+                {{else if eq .Lang "tw"}}
+                    晚上 (正在製作)
+                {{else if eq .Lang "en"}}
+                    Evening (Coming Soon)
+                {{end}}
+                    {{/*<img src="static/play-button.png" alt="">*/}}
+                </a>
+
+                <a href="#" class="list-group-item list-group-item-action">
+                    2018-09-09
+                {{if eq .Lang "cn"}}
+                    下午 (正在制作)
+                {{else if eq .Lang "tw"}}
+                    下午 (正在製作)
+                {{else if eq .Lang "en"}}
+                    Afternoon (Coming Soon)
+                {{end}}
+                    {{/*<img src="static/play-button.png" alt="">*/}}
+
+                </a>
+            </div>
 
             <!--<h4 class="card-title"></h4>
             <p class="card-text">今年9月9日是一个特别的日子，除了傍晚开始正好是犹太新年5779吹角节，也是40天全球禁食祷告的结束，并且“正巧”是主日！ 利未記23:23-25 「你曉諭以色列人說：七月初一，你們要守為聖安息日，要吹角 做紀念，當有聖會。什麼勞碌的工都不可做，要將火祭獻給耶和華。」</p>
