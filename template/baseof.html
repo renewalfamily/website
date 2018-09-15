@@ -33,7 +33,6 @@
 <body>
 
 <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
-<!--<nav class="navbar navbar-expand-sm navbar-dark bg-dark">-->
     <div class="container">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu1">
             <span class="navbar-toggler-icon"></span>
@@ -41,7 +40,7 @@
 
         <div class="collapse navbar-collapse justify-content-around" id="menu1">
             <ul class="navbar-nav">
-                <li class="nav-item {{if eq .PageName "index"}}active{{end}}">
+                <li class="nav-item {{if eq .PageName `index`}}active{{end}}">
                     <a class="nav-link" href="index-{{.Lang}}.html">
                         {{if eq .Lang "cn"}}
                         首页
@@ -52,26 +51,26 @@
                         {{end}}
                     </a>
                 </li>
-                <li class="nav-item dropdown {{if eq .PageName "together"}}active{{end}}">
+                <li class="nav-item dropdown {{if eq .PageName `together` `prophecy`}}active{{end}}">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         {{if eq .Lang "cn"}}
-                        最新消息 <span class="badge badge-danger badge-pill">2</span>
+                        最新消息
                         {{else if eq .Lang "tw"}}
-                        最新消息  <span class="badge badge-danger badge-pill">2</span>
+                        最新消息
                         {{else if eq .Lang "en"}}
-                        News <span class="badge badge-danger badge-pill">2</span>
+                        News
                         {{end}}
+                        <span class="badge badge-danger badge-pill">2</span>
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item {{if eq .PageName "together"}}active{{end}}" href="together-{{.Lang}}.html?v1">
+                        <a class="dropdown-item {{if eq .PageName `prophecy`}}active{{end}}" href="prophecy-{{.Lang}}.html?v1">
                             {{if eq .Lang "cn"}}
-                            "如同一人"聚集 <span class="badge badge-danger badge-pill">新</span>
+                            启示性分享 <span class="badge badge-danger badge-pill">新</span>
                             {{else if eq .Lang "tw"}}
-                            "如同一人"聚集 <span class="badge badge-danger badge-pill">新</span>
+                            啟示性分享 <span class="badge badge-danger badge-pill">新</span>
                             {{else if eq .Lang "en"}}
-                            Together As One <span class="badge badge-danger badge-pill">New</span>
+                            Prophetic Sharing <span class="badge badge-danger badge-pill">New</span>
                             {{end}}
-
                         </a>
                         <a class="dropdown-item" href="http://www.ihopuchinese.org/Artcle/Index?MenuId=26&NavigateId=28" target="_blank">
                             {{if eq .Lang "cn"}}
@@ -84,6 +83,15 @@
                         </a>
 
                         <div class="dropdown-divider"></div>
+                        <a class="dropdown-item {{if eq .PageName `together`}}active{{end}}" href="together-{{.Lang}}.html?v1">
+                            {{if eq .Lang "cn"}}
+                            "如同一人"聚集
+                            {{else if eq .Lang "tw"}}
+                            "如同一人"聚集
+                            {{else if eq .Lang "en"}}
+                            Together As One
+                            {{end}}
+                        </a>
                         <a class="dropdown-item" href="http://www.renewalfamily.org/EstherArise1111/{{.Lang}}/index.html" target="_blank">
                             {{if eq .Lang "cn"}}
                             1111 聚集(2017)
@@ -107,7 +115,7 @@
                     </a>
                 </li>
 
-               {{/* <li class="nav-item {{if eq .PageName "core-value"}}active{{end}}">
+               {{/* <li class="nav-item {{if eq .PageName `core-value`}}active{{end}}">
                 <a class="nav-link" href="core-value-{{.Lang}}.html">
                     {{if eq .Lang "cn"}}
                     核心价值
@@ -147,7 +155,7 @@
                             City Prayer Altar
                             {{end}}
                         </a>
-
+                        <div class="dropdown-divider"></div>
                         <a class="dropdown-item {{if eq .PageName `core-value`}}active{{end}}"  href="core-value-{{.Lang}}.html">
                             {{if eq .Lang "cn"}}
                                 核心价值
