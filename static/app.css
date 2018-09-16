@@ -18,6 +18,10 @@ body {
     background-color: #edc8e6;
 }
 
+.bg-vision {
+    background-color: #C6E1FF;
+}
+
 h1, h2, h5, p {
     line-height: 1.8em;
 }

@@ -103,6 +103,18 @@
                         </a>
                     </div>
                 </li>
+                <li class="nav-item {{if eq .PageName `sharing`}}active{{end}}">
+                    <a class="nav-link" href="sharing-{{.Lang}}.html">
+                        {{if eq .Lang "tw"}}
+                        家人分享室
+                        {{else if eq .Lang "cn"}}
+                        家人分享室
+                        {{else if eq .Lang "en"}}
+                        Family Sharing
+                        {{end}}
+                    </a>
+                </li>
+
                 <li class="nav-item {{if eq .PageName `awaken`}}active{{end}}">
                     <a class="nav-link" href="awaken-{{.Lang}}.html">
                         {{if eq .Lang "tw"}}
