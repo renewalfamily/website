@@ -63,13 +63,13 @@
                         <span class="badge badge-danger badge-pill">2</span>
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item {{if eq .PageName `prophecy`}}active{{end}}" href="prophecy-{{.Lang}}.html?v1">
+                        <a class="dropdown-item {{if eq .PageName `prophecy`}}active{{end}}" href="prophecy-{{.Lang}}.html">
                             {{if eq .Lang "cn"}}
-                            启示性分享 <span class="badge badge-danger badge-pill">新</span>
+                            先知预言 <span class="badge badge-danger badge-pill">新</span>
                             {{else if eq .Lang "tw"}}
-                            啟示性分享 <span class="badge badge-danger badge-pill">新</span>
+                            先知預言 <span class="badge badge-danger badge-pill">新</span>
                             {{else if eq .Lang "en"}}
-                            Prophetic Sharing <span class="badge badge-danger badge-pill">New</span>
+                            Prophecy <span class="badge badge-danger badge-pill">New</span>
                             {{end}}
                         </a>
                         <a class="dropdown-item" href="http://www.ihopuchinese.org/Artcle/Index?MenuId=26&NavigateId=28" target="_blank">
@@ -83,7 +83,7 @@
                         </a>
 
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item {{if eq .PageName `together`}}active{{end}}" href="together-{{.Lang}}.html?v1">
+                        <a class="dropdown-item {{if eq .PageName `together`}}active{{end}}" href="together-{{.Lang}}.html">
                             {{if eq .Lang "cn"}}
                             "如同一人"聚集
                             {{else if eq .Lang "tw"}}
