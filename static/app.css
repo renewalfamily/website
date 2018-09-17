@@ -25,6 +25,10 @@ body {
     background-color: #F5B6FF;
 }
 
+#letter {
+    background: url("letter-bg2.jpg") repeat center center;
+}
+
 h1, h2, h5, p {
     line-height: 1.8em;
 }
