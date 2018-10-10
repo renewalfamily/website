@@ -72,24 +72,24 @@
                             Prophecy <span class="badge badge-danger badge-pill">New</span>
                             {{end}}
                         </a>
-                        <a class="dropdown-item" href="http://www.ihopuchinese.org/Artcle/Index?MenuId=26&NavigateId=28" target="_blank">
-                            {{if eq .Lang "cn"}}
-                            "匯集"回家聚集 <span class="badge badge-danger badge-pill">新</span>
-                            {{else if eq .Lang "tw"}}
-                            "匯集"回家聚集 <span class="badge badge-danger badge-pill">新</span>
-                            {{else if eq .Lang "en"}}
-                            Convergence Gathering <span class="badge badge-danger badge-pill">New</span>
-                            {{end}}
-                        </a>
 
-                        <div class="dropdown-divider"></div>
                         <a class="dropdown-item {{if eq .PageName `together`}}active{{end}}" href="together-{{.Lang}}.html">
                             {{if eq .Lang "cn"}}
-                            "如同一人"聚集
+                            "如同一人"聚集 <span class="badge badge-danger badge-pill">新</span>
                             {{else if eq .Lang "tw"}}
-                            "如同一人"聚集
+                            "如同一人"聚集 <span class="badge badge-danger badge-pill">新</span>
                             {{else if eq .Lang "en"}}
-                            Together As One
+                            Together As One <span class="badge badge-danger badge-pill">New</span>
+                            {{end}}
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="http://www.ihopuchinese.org/Artcle/Index?MenuId=26&NavigateId=28" target="_blank">
+                            {{if eq .Lang "cn"}}
+                            "匯集"回家聚集
+                            {{else if eq .Lang "tw"}}
+                            "匯集"回家聚集
+                            {{else if eq .Lang "en"}}
+                            Convergence Gathering
                             {{end}}
                         </a>
                         <a class="dropdown-item" href="http://www.renewalfamily.org/EstherArise1111/{{.Lang}}/index.html" target="_blank">
@@ -256,5 +256,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+{{block "tmScript" .}}
+<script></script>
+{{end}}
 </body>
 </html>

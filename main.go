@@ -5,6 +5,7 @@ import (
 	"html/template"
 	"io"
 	"log"
+	"math"
 	"net/http"
 	"os"
 	"path/filepath"
@@ -26,6 +27,8 @@ var tmplDir = "template"
 var baseTemplate = "baseof.html"
 var tmplSuffix = ".html"
 var tmpls map[string]*template.Template
+
+var imagePaths []string
 
 // parse all the templates
 func init() {
@@ -53,9 +56,42 @@ func init() {
 
 	fmt.Println(tmpDetails)
 
-	for _, d := range tmpDetails {
-		tmpls[d.tmName] = template.Must(template.New(d.tmName).ParseFiles(d.tmFileNames...))
+	imagePaths = getPhotoURLs("static/imgs")
+	totalPhoto := len(imagePaths)
+
+	tmplFuncs := template.FuncMap{
+		"isRowStart": func(numPerRow int, index int) bool {
+			return math.Mod(float64(index), float64(numPerRow)) == 0
+		},
+		"isRowEnd": func(numPerRow int, index int) bool {
+			return int(math.Mod(float64(index), float64(numPerRow))) == numPerRow-1
+		},
+		"isLastCol": func(index int) bool {
+			//fmt.Println(index, total)
+			return totalPhoto == index+1
+		},
 	}
+
+	for _, d := range tmpDetails {
+		tmpls[d.tmName] = template.Must(template.New(d.tmName).Funcs(tmplFuncs).ParseFiles(d.tmFileNames...))
+	}
+}
+
+func getPhotoURLs(root string) []string {
+	photoURLs := []string{}
+	// get all the thumbnail photo which begin with letter S
+	filepath.Walk(root, func(path string, info os.FileInfo, err error) error {
+
+		if !strings.HasSuffix(info.Name(), "JPG") {
+			return nil
+		}
+		//fmt.Println(path)
+		photoURLs = append(photoURLs, filepath.ToSlash(path))
+		//photoURLs = append(photoURLs, filepath.ToSlash(filepath.Join("/", path)))
+		return nil
+	})
+	fmt.Println(photoURLs)
+	return photoURLs
 }
 
 func main() {
@@ -174,11 +210,13 @@ func hdTemplate(w io.Writer, path string) error {
 		return fmt.Errorf("hdTemplate: wrong Lang in url: %v", path)
 	}
 	return tmpls[tmName].ExecuteTemplate(w, baseTemplate, struct {
-		Lang     string
-		PageName string
+		Lang       string
+		PageName   string
+		ImagePaths []string
 	}{
 		lang,
 		tmName,
+		imagePaths,
 	})
 }
 
