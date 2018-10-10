@@ -110,16 +110,17 @@ Together As One
     {{range $index, $path := .ImagePaths}}
     {{if isRowStart 3 $index}}
     <div class="row my-4">
-        {{end}}
+    {{end}}
         <div class="col">
             <img src="{{$path}}" class="img-fluid">
         </div>
-        {{if isRowEnd 3 $index}}
+    {{if isRowEnd 3 $index}}
     </div>
     {{else if isLastCol $index}}
+    </div>
+    {{end}}
+    {{end}}
 </div>
-{{end}}
-{{end}}
 <div class="modal fade" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel" aria-hidden="true">
     <div class="modal-dialog  modal-lg" role="document">
         <div class="modal-content">
