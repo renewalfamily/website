@@ -33,3 +33,6 @@ h1, h2, h5, p {
     line-height: 1.8em;
 }
 
+#gallery img {
+    cursor: pointer;
+}

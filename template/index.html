@@ -13,7 +13,17 @@ Renewal Family
 <div class="container my-3" id="index">
     <div class="row">
         <div class="col-xl-6 col-lg-7 d-none d-lg-block">
-            <img src="static/blow-shofar.jpg" class="img-fluid" alt="">
+            <a href="together-{{.Lang}}.html">
+                <img src="static/blow-shofar.jpg" class="img-fluid"
+                {{if eq .Lang "cn"}}
+                title="点击查看详情"
+                {{else if eq .Lang "tw"}}
+                title="點擊查看詳情"
+                {{else if eq .Lang "en"}}
+                title="Click for details"
+                {{end}}
+                data-toggle="tooltip" alt="">
+            </a>
         </div>
 
         <div class="col-12 col-lg-5 col-xl-6 text-center">
