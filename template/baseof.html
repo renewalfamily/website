@@ -60,29 +60,37 @@
                         {{else if eq .Lang "en"}}
                         News
                         {{end}}
-                        <span class="badge badge-danger badge-pill">2</span>
+                        <span class="badge badge-danger badge-pill">1</span>
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item {{if eq .PageName `prophecy`}}active{{end}}" href="prophecy-{{.Lang}}.html">
+                        <a class="dropdown-item {{if eq .PageName `moshi`}}active{{end}}" href="moshi-{{.Lang}}.html">
                             {{if eq .Lang "cn"}}
-                            先知预言 <span class="badge badge-danger badge-pill">新</span>
+                            末世课程 <span class="badge badge-danger badge-pill">新</span>
                             {{else if eq .Lang "tw"}}
-                            先知預言 <span class="badge badge-danger badge-pill">新</span>
+                            末世課程 <span class="badge badge-danger badge-pill">新</span>
                             {{else if eq .Lang "en"}}
-                            Prophecy <span class="badge badge-danger badge-pill">New</span>
-                            {{end}}
-                        </a>
-
-                        <a class="dropdown-item {{if eq .PageName `together`}}active{{end}}" href="together-{{.Lang}}.html">
-                            {{if eq .Lang "cn"}}
-                            "如同一人"聚集 <span class="badge badge-danger badge-pill">新</span>
-                            {{else if eq .Lang "tw"}}
-                            "如同一人"聚集 <span class="badge badge-danger badge-pill">新</span>
-                            {{else if eq .Lang "en"}}
-                            Together As One <span class="badge badge-danger badge-pill">New</span>
+                            Eschatology Course <span class="badge badge-danger badge-pill">New</span>
                             {{end}}
                         </a>
                         <div class="dropdown-divider"></div>
+                        <a class="dropdown-item {{if eq .PageName `prophecy`}}active{{end}}" href="prophecy-{{.Lang}}.html">
+                            {{if eq .Lang "cn"}}
+                            先知预言
+                            {{else if eq .Lang "tw"}}
+                            先知預言
+                            {{else if eq .Lang "en"}}
+                            Prophecy
+                            {{end}}
+                        </a>
+                        <a class="dropdown-item {{if eq .PageName `together`}}active{{end}}" href="together-{{.Lang}}.html">
+                            {{if eq .Lang "cn"}}
+                            "如同一人"聚集
+                            {{else if eq .Lang "tw"}}
+                            "如同一人"聚集
+                            {{else if eq .Lang "en"}}
+                            Together As One
+                            {{end}}
+                        </a>
                         <a class="dropdown-item" href="http://www.ihopuchinese.org/Artcle/Index?MenuId=26&NavigateId=28" target="_blank">
                             {{if eq .Lang "cn"}}
                             "匯集"回家聚集

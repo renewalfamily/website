@@ -1,0 +1,135 @@
+{{define "tmTitle"}}
+{{if eq .Lang "cn"}}
+末世课程
+{{else if eq .Lang "tw"}}
+末世課程
+{{else if eq .Lang "en"}}
+Eschatology Course
+{{end}}
+{{end}}
+
+{{define "tmContent"}}
+
+<div class="container mb-5" id="renewal-family">
+{{/*    <div class="row">
+        <div class="col">
+            {{if eq .Lang "tw"}}
+            <h1 class="text-center">末世課程</h1>
+            {{else if eq .Lang "cn"}}
+            <h1 class="text-center">末世课程</h1>
+            {{else if eq .Lang "en"}}
+            <h1 class="text-center">Eschatology Course</h1>
+            {{end}}
+        </div>
+    </div>*/}}
+    <div class="row">
+        <div class="col-12 col-sm-11 col-md-10 col-lg-9 col-xl-8 text-justify mx-auto">
+            <div class="table-responsive-md">
+            <img src="static/moshi/Endtime.jpg" alt="" class="img-fluid">
+            <table class="table table-hover table-bordered" id="moshi-table">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">课目</th>
+                    <th scope="col">教材</th>
+                    <th scope="col">音频文件</th>
+                    <th scope="col">视频文件</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">第1课 主再来的预兆</th>
+                    <td><a href="static/moshi/Lesson1.pdf"><img src="static/book.svg" alt="Lesson1.pdf"></a></td>
+                    <td><a href="static/moshi/Lesson1.m4a"><img src="static/sound.svg" alt="Lesson1.m4a"></a></td>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=Mw_5dh6Mi7E" target="_blank">
+                            <img src="static/video.svg" alt="Lesson1 Youtube Video">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">第2课 第5印和第6印</th>
+                    <td><a href="static/moshi/Lesson2.pdf"><img src="static/book.svg" alt="Lesson2.pdf"></a></td>
+                    <td><a href="static/moshi/Lesson2.m4a"><img src="static/sound.svg" alt="Lesson2.m4a"></a></td>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=PWmaeSqN-Ng" target="_blank">
+                            <img src="static/video.svg" alt="Lesson2 Youtube Video">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">第3课 第7印，1-7号和1-7碗</th>
+                    <td><a href="static/moshi/Lesson3.pdf"><img src="static/book.svg" alt="Lesson3.pdf"></a></td>
+                    <td><a href="static/moshi/Lesson3.m4a"><img src="static/sound.svg" alt="Lesson3.m4a"></a></td>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=XUFEMscTNYg" target="_blank">
+                            <img src="static/video.svg" alt="Lesson3 Youtube Video">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">第4课 末世实践生存法</th>
+                    <td><a href="static/moshi/Lesson4.pdf"><img src="static/book.svg" alt="Lesson4.pdf"></a></td>
+                    <td><a href="static/moshi/Lesson4.m4a"><img src="static/sound.svg" alt="Lesson4.m4a"></a></td>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=dbuJAkrn5X0" target="_blank">
+                            <img src="static/video.svg" alt="Lesson4 Youtube Video">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">第5课 从苦难进入完全</th>
+                    <td><a href="static/moshi/Lesson5.pdf"><img src="static/book.svg" alt="Lesson5.pdf"></a></td>
+                    <td><a href="static/moshi/Lesson5.m4a"><img src="static/sound.svg" alt="Lesson5.m4a"></a></td>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=0xXuOoKKU58" target="_blank">
+                            <img src="static/video.svg" alt="Lesson5 Youtube Video">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">第6课 末日得胜者歌珊地</th>
+                    <td>
+                        <a href="static/moshi/Lesson6-1.pdf"><img src="static/book.svg" alt="Lesson6-1.pdf"></a>
+                        <a href="static/moshi/Lesson6-2.pdf"><img src="static/book.svg" alt="Lesson6-2.pdf"></a>
+                    </td>
+                    <td><a href="static/moshi/Lesson6.m4a"><img src="static/sound.svg" alt="Lesson6.m4a"></a></td>
+                    <td>NA</td>
+                </tr>
+                <tr>
+                    <th scope="row">第7课 得胜者被提</th>
+                    <td>
+                        <a href="static/moshi/Lesson7.pdf"><img src="static/book.svg" alt="Lesson7.pdf"></a>
+                    </td>
+                    <td><a href="static/moshi/Lesson7.m4a"><img src="static/sound.svg" alt="Lesson7.m4a"></a></td>
+                    <td>NA</td>
+                </tr>
+                <tr>
+                    <th scope="row">第8课 宣教大使命的预备</th>
+                    <td><a href="static/moshi/Lesson8.pdf"><img src="static/book.svg" alt="Lesson8.pdf"></a></td>
+                    <td><a href="static/moshi/Lesson8.m4a"><img src="static/sound.svg" alt="Lesson8.m4a"></a></td>
+                    <td>NA</td>
+                </tr>
+                <tr>
+                    <th scope="row">第9课 殉道者的预备</th>
+                    <td><a href="static/moshi/Lesson9.pdf"><img src="static/book.svg" alt="Lesson9.pdf"></a></td>
+                    <td>
+                        <a href="static/moshi/Lesson9-TheCross.mp3"><img src="static/sound.svg" alt="Lesson9-TheCross.mp3"></a>
+                        <a href="static/moshi/Lesson9.m4a"><img src="static/sound.svg" alt="Lesson9.m4a"></a>
+                    </td>
+{{/*                    <td><a href="static/moshi/Lesson9.mp4"><img src="static/video.svg" alt="Lesson9.mp4"></a></td>*/}}
+                    <td>NA</td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+            {{if eq .Lang "tw"}}
+
+            {{else if eq .Lang "cn"}}
+
+            {{else if eq .Lang "en"}}
+
+            {{end}}
+        </div>
+    </div>
+</div>
+{{end}}

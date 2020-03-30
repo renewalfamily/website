@@ -36,3 +36,12 @@ h1, h2, h5, p {
 #gallery img {
     cursor: pointer;
 }
+
+#moshi-table img {
+    width: auto;
+    height: 150%;
+}
+
+/*#moshiallinone table {*/
+/*    min-width: ;*/
+/*}*/
