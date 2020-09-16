@@ -60,9 +60,18 @@
                         {{else if eq .Lang "en"}}
                         News
                         {{end}}
-                        <span class="badge badge-danger badge-pill">1</span>
+                        <span class="badge badge-danger badge-pill">2</span>
                     </a>
                     <div class="dropdown-menu">
+                        <a class="dropdown-item {{if eq .PageName `moshi`}}active{{end}}" href="one-family-{{.Lang}}.html">
+                            {{if eq .Lang "cn"}}
+                                一家人  一聲音 <span class="badge badge-danger badge-pill">新</span>
+                            {{else if eq .Lang "tw"}}
+                                一家人  一聲音 <span class="badge badge-danger badge-pill">新</span>
+                            {{else if eq .Lang "en"}}
+                                ONE FAMILY ONE VOICE <span class="badge badge-danger badge-pill">New</span>
+                            {{end}}
+                        </a>
                         <a class="dropdown-item {{if eq .PageName `moshi`}}active{{end}}" href="moshi-{{.Lang}}.html">
                             {{if eq .Lang "cn"}}
                             末世课程 <span class="badge badge-danger badge-pill">新</span>
