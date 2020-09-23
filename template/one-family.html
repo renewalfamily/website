@@ -1,6 +1,6 @@
 {{define "tmTitle"}}
 {{if eq .Lang "cn"}}
-一家人  一聲音
+一家人 一声音
 {{else if eq .Lang "tw"}}
 一家人  一聲音
 {{else if eq .Lang "en"}}
@@ -9,13 +9,47 @@ ONE FAMILY ONE VOICE
 {{end}}
 
 {{define "tmContent"}}
-<div class="bg2 py-3" id="together">
+<div class="bg2 py-3" id="onefamily">
     <div class="container">
+
+        <div class="row">
+            <div class="col col-lg-10 col-xl-9 text-center mx-auto">
+                {{if eq .Lang "tw"}}
+                <h2 class="mb-2">一家人 一聲音</h2>
+                <h4>5781猶太新年吹角節<br>9/18網上聚集 召聚全地華人</h4>
+                {{else if eq .Lang "cn"}}
+                <h2 class="mb-2">一家人 一声音</h2>
+                <h4>5781犹太新年吹角节<br>9/18网上聚集 召聚全地华人</h4>
+                {{else if eq .Lang "en"}}
+                <h2 class="mb-2">ONE FAMILY ONE VOICE</h2>
+                <h5>5781 Feast of Trumpets<br>Releasing ONE VOICE of LOVE from the Global Chinese Family</h5>
+                {{end}}
+                <div class="embed-responsive embed-responsive-16by9 mb-5">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/gQiy6-W1b4E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col col-lg-10 col-xl-9 text-center mx-auto">
+                {{if eq .Lang "tw"}}
+                <h2 class="mb-2">5781猶太新年<br>吹角節录像</h2>
+                {{else if eq .Lang "cn"}}
+                <h2 class="mb-2">5781犹太新年<br>吹角节录像</h2>
+                {{else if eq .Lang "en"}}
+                <h2 class="mb-2">5781 Feast of Trumpets Video</h2>
+                {{end}}
+                <div class="embed-responsive embed-responsive-16by9 mb-5">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zzBR_kWDhns" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
         <div class="row justify-content-center">
             <div class="col col-lg-10 col-xl-9 text-justify">
-                <img src="static/OneFamily.jpg" class="card-img-top img-fluid mb-3" alt="">
-
-            {{if or (eq .Lang "tw") (eq .Lang "cn")}}
+{{/*                <img src="static/OneFamily.jpg" class="card-img-top img-fluid mb-3" alt="">*/}}
+            {{if eq .Lang "tw"}}
+{{/*            {{if or (eq .Lang "tw") (eq .Lang "cn")}}*/}}
             <h2 class="text-center">一家人  一聲音</h2>
             <h5 class="text-center">5781猶太新年吹角節  召聚全地華人  回應天上愛的召喚！</h5>
 
@@ -37,6 +71,28 @@ ONE FAMILY ONE VOICE
             </p>
             <p>這是愛的匯流，這是愛的召喚！ 請轉發給主在你心中感動要同心同行的家人，一起加入來自東方的號角聲，釋放神的榮耀，讓全地因祂的榮耀發光， 一起跨入充滿驚喜的5781猶太新年！</p>
             <p class="text-right">華夏一家回家團隊 敬邀</p>
+
+            {{else if eq .Lang "cn"}}
+                <h2 class="text-center">一家人 一声音</h2>
+                <h5 class="text-center">5781犹太新年吹角节 召聚全地华人 回应天上爱的召唤！ </h5>
+                <p>2009年9月18／19日犹太新年，在温哥华首次举办的「华人同心同行聚集」启动了2010年在香港的一系列的华人聚集，11年后，犹太新年恰好又落在9月18／19日，主给我们一个记号：从回家的母腹再次对齐、召聚的时候到了！我们要进入第11小时（英文：时候不多了！）！华夏一家中港台澳海外的回家团队代表们在网上汇聚一堂，戴冕恩牧师和赵仲权牧师以及各地各族的国度家人们，要和我们一起见证这个历史时刻！我们的处境、文化、政治、语言可以不同，但​​是无论我们身在何处，在基督里，我们灵里可以聚在一处！我们要释放华人血脉里的声音，从锡安之城发声、吹角、宣告好消息：我们已经为主预备了安息之所（约珥2:1，赛52:1-2，8-9）！ （请上网参加一系列“神的居所”全球聚集 ：<a href="https://watchmen.org">https://watchmen.org</a>）</p>
+                <p>当年在马可楼上120位等候主的属灵先锋们单单只做一件事：在主所定的时间同心合意聚在一处，天上就释放了极大的声音，圣灵的新季节就此开始！如今，在主快来的日子，在进入5781犹太新年的新季节，天堂仍在等候我们这个世代爱的汇聚，好再次释放天上的声音！当年的约翰听见众水的声音，大雷的声音，说：「哈利路亚！因为主我们的神，全能者做王了。我们要欢喜快乐，将荣耀归给他，因为羔羊婚娶的时候到了，新妇也自己预备好了！」（启19：6－7） 以西结先知也早听见众水的声音，而他看见神的荣光先从东而来，且地就因此发光（结43 :2）！莫非我们华人就是这末世来自东方的声音，要率先在这世代与神的声音交汇，深渊与深渊响应，释放天地间众水汇流的声音！ ？ </p>
+                <p>华人新妇啊， 来！主在等候我们呈现祂这些年间在我们中间作的极大的美事：主在我们中间做成一个真实的家，一个五合一（中、港、台、澳、海外）爱的家！来！一起成为末世的夜半呼声：新郎来了，你们出来迎接祂（太25：6）！ </p>
+                <p>全球家人啊，来！听我们华夏一家从“一团散沙成了一个家一只军队”的爱的故事！来！和我们一起与主联合，进入这个爱的大汇流！来！和我们一起融入天上新郎和地上新妇彼此想念的渴望的声音！ </p>
+                <p>让我们一起说： 主耶稣啊，我们已经为祢预备了一个安息之所，我们愿祢来（启22：20）！ </p>
+                <p>请预备：号角和圣餐。按主的感动，鼓励各地的家人自由地以一个家、一个教会、一个城市、一个祷告殿等，一起聚集参加, 跟着主会场一起敬拜，预备一起圣餐和吹角。 </p>
+                <p><strong>时间：</strong>9月18日温哥华时间晚上7pm 即9月19日亚洲时间上午10am<br>
+                    <strong>语言：</strong>中英文双语<br>
+                    <strong>网上参加的链接：</strong>（请海外家人使用以下链接，把Zoom空间给国人）<br>
+                    <strong>海外家人：</strong><br>
+                    <a href="https://watchmen.org">https://watchmen.org</a><br>
+                    <a href="http://renewalfamily.org/live/index.html">http://renewalfamily.org/live/index.html</a><br>
+                    <strong>国内家人：</strong><br>
+                    <a href="https://us02web.zoom.us/j/81664689556">https://us02web.zoom.us/j/81664689556</a><br>
+                    Zoom ID: 81664689556<br>
+                </p>
+                <p>这是爱的汇流，这是爱的召唤！请转发给主在你心中感动要同心同行的家人，一起加入来自东方的号角声，释放神的荣耀，让全地因祂的荣耀发光， 一起跨入充满惊喜的5781犹太新年！ </p>
+                <p class="text-right">华夏一家回家团队 敬邀</p>
             {{else if eq .Lang "en"}}
                 <h2 class="text-center">ONE FAMILY ONE VOICE</h2>
                 <h5 class="text-center">Feast of Trumpets: Releasing ONE VOICE of LOVE from the Global Chinese Family</h5>
@@ -69,31 +125,9 @@ ONE FAMILY ONE VOICE
         </div>
     </div>
 </div>
+</div>
             {{if eq .Lang "tw"}}
-
             {{else if eq .Lang "cn"}}
-
             {{else if eq .Lang "en"}}
-
             {{end}}
-{{/*    <div class="container">*/}}
-{{/*        <div class="row">*/}}
-{{/*            <div class="col my-2">*/}}
-{{/*                <h2 class="text-center">5781猶太新年吹角節直播</h2>*/}}
-{{/*            </div>*/}}
-{{/*        </div>*/}}
-{{/*        <div class="row">*/}}
-{{/*            <div class="col d-flex justify-content-around my-2">*/}}
-{{/*                <a href="http://www.renewalfamily.org/v2/index-cn.html" >*/}}
-{{/*                    Home/主页*/}}
-{{/*                    <img src="lock.png" alt="">*/}}
-{{/*                </a>*/}}
-{{/*                <a href="http://renewalfamily.org/live/index.html">*/}}
-{{/*                    <img src="youtube.png" alt="">*/}}
-{{/*                    Live Steaming/现场直播*/}}
-{{/*                </a>*/}}
-{{/*                <!-- redirecting... -->*/}}
-{{/*            </div>*/}}
-{{/*        </div>*/}}
-{{/*    </div>*/}}
 {{end}}
