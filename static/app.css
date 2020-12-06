@@ -1,0 +1,47 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Lucida Grande", "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", "Microsoft JhengHei", SimKai, sans-serif;
+    margin-top: 50px;
+}
+
+.row {
+    padding-top: 30px;
+}
+
+.bg1 {
+    background-color: #eedeb0;
+}
+.bg2 {
+    background-color: #f0fbf0;
+}
+
+.bg-prophecy {
+    background-color: #edc8e6;
+}
+
+.bg-sharing {
+    background-color: #C6E1FF;
+}
+.bg-sharing1 {
+    background-color: #F5B6FF;
+}
+
+#letter {
+    background: url("letter-bg2.jpg") repeat center center;
+}
+
+h1, h2, h5, p {
+    line-height: 1.8em;
+}
+
+#gallery img {
+    cursor: pointer;
+}
+
+#moshi-table img {
+    width: auto;
+    height: 1.8em;
+}
+
+#moshi-table {
+    min-width: 460px;
+}
